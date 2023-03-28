@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+body{
+    background-color: #f3f1f1;
+}
+
+header, main{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+header{
+    text-align: center;
+}
+
+main{
+    margin-bottom: 10px;
+}
+
+#titolo{
+    margin: 0;
+}
+
+#bio{
+    max-width: 50%;
+}
+
+#mail{
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+p{
+    margin: 10px;
+}
+
+#mia-foto{
+    margin-right: 50px;
+}
+
+#social{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table, th, tr, td{
+    border: solid 1px black;
+}
+
+#competenze{
+    padding: 20px;
+}
+
+table h4{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+td{
+    padding: 10px;
+}
+
+#tabella{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+#footer{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
