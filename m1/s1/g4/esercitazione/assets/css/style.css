@@ -171,6 +171,13 @@ iframe{
     padding: 5px;
 }
 
+.news button{
+    color: white;
+    background-color: #4070ce;
+    border: none;
+    padding: 5px;
+}
+
 /* ELEMENTI NEL MAIN - ARTICLE */
 
 /* TABELLE */
