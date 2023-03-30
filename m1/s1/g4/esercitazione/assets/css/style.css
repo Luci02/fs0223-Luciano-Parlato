@@ -8,14 +8,15 @@ body {
     line-height: 1.5;
 }
 
-code{
+code {
     font-family: monospace;
     background-color: #e1dfe0;
     border-radius: 5px;
     border-color: #8b8b8b;
 }
 
-a, a:visited{
+a,
+a:visited {
     color: #009bcb;
     font-weight: bold;
 }
@@ -49,7 +50,7 @@ a, a:visited{
 }
 
 #menu li {
-    list-style: none;
+    list-style-type: none;
     margin-bottom: 10px;
 }
 
@@ -71,6 +72,7 @@ a, a:visited{
 .main-content {
     background-color: white;
     padding: 30px 20px;
+    margin-bottom: 20px;
 }
 
 #main-title {
@@ -80,52 +82,93 @@ a, a:visited{
     font-weight: bold;
 }
 
-.descr{
+.descr {
     color: #96a89b;
     font-size: 1em;
     margin-bottom: 20px;
 }
 
-.purple{
+.purple {
     color: #aa2072;
 }
 
-.post-content p{
+.post-content p {
     margin-bottom: 20px;
 }
 
-.content-ul{
+.content-ul {
     padding-left: 30px;
     margin-bottom: 20px;
 }
 
-.post-content .special-p{
+.post-content .special-p {
     margin-bottom: 0px;
 }
 
-.table-css{
+iframe {
+    border-radius: 25px;
+    margin-bottom: 30px;
+}
+
+.news {
+    background-color: #e2dddf;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.news h2,
+aside h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #2c3237;
+    margin-bottom: 20px;
+}
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+.article {
+    background-color: #e7e4e6;
+    border: 1px solid #cececf;
+    margin-bottom: 20px;
+    padding: 20px 10px;
+}
+
+.article i {
+    margin-right: 5px;
+}
+
+.date {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+/* TABELLE */
+.table-css {
     width: 100%;
     text-align: center;
     border: none;
     margin-bottom: 20px;
 }
 
-.table-css th, .table-css td{
+.table-css th,
+.table-css td {
     border: none;
 }
 
-.table-css caption{
+.table-css caption {
     font-style: italic;
     font-weight: bold;
     margin-bottom: 2px;
-    
+
 }
 
-.table-css th,.table-css td{
+.table-css th,
+.table-css td {
     padding: 20px 10px;
 }
 
-.table-css thead th{
+.table-css thead th {
     color: white;
     background-color: #3366cc;
 }
@@ -141,49 +184,40 @@ a, a:visited{
     border-right: 1px solid #e7e7e8;
 }
 
-.table-css tr:nth-last-child(1){
+.table-css tr:nth-last-child(1) {
     border-bottom: 2px solid #3366cc;
 }
 
-iframe{
-    border-radius: 25px;
-    margin-bottom: 30px;
-}
-
-.news{
-    background-color: #e2dddf;
-    padding: 10px;
-}
-
-.news h2{
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.8em;
-    color: #2c3237;
-    margin-bottom: 20px;
-}
-
-.news input{
+/* FORM */
+.news input {
     margin-top: 15px;
     border: none;
     border-bottom: 1px dashed;
     padding: 5px;
 }
 
-.news button{
+.news button {
     color: white;
     background-color: #4070ce;
     border: none;
     padding: 5px;
 }
 
-/* ELEMENTI NEL MAIN - ARTICLE */
-
-/* TABELLE */
-
-/* FORM */
-
-/* ELEMENTI NELL' ASIDE */
-
 /* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px 20px;
+    color: white;
+    background: rgb(42, 51, 56);
+    background: -moz-linear-gradient(0deg, rgba(42, 51, 56, 1) 0%, rgba(11, 80, 106, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(42, 51, 56, 1) 0%, rgba(11, 80, 106, 1) 100%);
+    background: linear-gradient(0deg, rgba(42, 51, 56, 1) 0%, rgba(11, 80, 106, 1) 100%);
+}
+
+footer h6{
+    margin-bottom: 20px;
+}
+
+footer a, footer a:visited{
+    color: #f714d0;
+}
