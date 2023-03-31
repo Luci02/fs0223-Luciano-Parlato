@@ -1,0 +1,189 @@
+/* TAGS */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #393d41;
+    line-height: 1.65;
+}
+
+header {
+    background-color: black;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: #f04c2f;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: #25a2c3;
+}
+
+footer,
+footer a {
+    color: #c8e7f0;
+}
+
+footer h3 {
+    color: white;
+    font-size: 1.8rem;
+}
+
+cite {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+address{
+    border-bottom: 1px solid #c8e7f0;
+    padding-bottom: 30px;
+}
+
+/* GENERALI */
+.centered-text{
+    text-align: center;
+}
+
+.space-up-down {
+    padding: 80px 30px;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+
+/*HEADER*/
+#logo-area {
+    padding: 20px 40px;
+}
+
+#logo-area img {
+    max-width: 10%;
+}
+
+
+/* MAIN */
+#main-section{
+    margin: 100px auto;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+#head-section {
+    background-image: url(../images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 200px 0;
+}
+
+#head-section p{
+    max-width: 50%;
+    margin: 0 auto 20px;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.main-paragraph h3 {
+    margin-bottom: 15px;
+}
+
+.main-img {
+    border-radius: 100%;
+    max-width: 80%;
+    margin-right: 100px;
+}
+
+#main-section img{
+    max-width: 30%;
+}
+
+#footer-section {
+    background-color: #e22d0e;
+    padding: 100px 40px;
+}
+
+#footer-section h2 {
+    font-size: 2rem;
+}
+
+.cite-name {
+    font-size: 1.3rem;
+}
+
+.cite-role {
+    font-size: 0.8rem;
+}
+
+
+/* ASIDE */
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #dee1e3;
+    border-radius: 0 0 5px 5px;
+    margin: 10px auto;
+    max-width: 30%;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card p, .card h3{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* FOOTER */
+.info {
+    margin-bottom: 30px;
+}
+
+.footer-container{
+    max-width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.credits {
+    margin: 30px 0;
+    font-size: 1rem;
+}
+
+.white {
+    color: white;
+}
