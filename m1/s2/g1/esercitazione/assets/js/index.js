@@ -1,5 +1,5 @@
-// alert('Usa il pop up per dare dei messaggi');
-// window.alert('Sto studiando JS');
+alert('Usa il pop up per dare dei messaggi');
+window.alert('Sto studiando JS');
 
 function esercizioExtra() {
     location.assign('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
