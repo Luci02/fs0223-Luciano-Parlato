@@ -1,0 +1,16 @@
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+section {
+    margin-left: 20px;
+}
+
+.output {
+    color: red;
+}

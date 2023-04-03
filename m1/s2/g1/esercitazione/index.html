@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Esercitazione pomeridiana 3-4-23</title>
+</head>
+
+<body>
+
+    <h1>Esercitazione</h1>
+
+    <section>
+        <h3>Esercizio nella console utilizzando la funzione "prompt()"</h3>
+        <p id="benvenuto"></p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h3>4 operazioni fondamentali</h3>
+        <form>
+            <div>
+                <label for="n1">Inserisci il primo numero:</label>
+                <input type="text" id="n1" name="n1">
+            </div>
+            <div>
+                <label for="n2">Inserisci il secondo numero:</label>
+                <input type="text" id="n2" name="n2">
+            </div>
+            <div>
+                <input type="button" value="Invia" onclick="operazioniFondamentali()">
+            </div>
+        </form>
+        <p>Il risultato della somma è: <span id="somma" class="output"></span></p>
+        <p>Il risultato della sottrazione è: <span id="sottrazione" class="output"></span></p>
+        <p>Il risultato della moltiplicazione è: <span id="moltiplicazione" class="output"></span></p>
+        <p>Il risultato della divisione è: <span id="divisione" class="output"></span></p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h3>Controllo dell'età</h3>
+        
+        <form>
+            <div>
+                <label for="age">Inserisci la tua età:</label>
+                <input type="number" name="age" id="age">
+            </div>
+            <input type="button" value="Invia" onclick="ageCheck(age.value)">
+        </form>
+        <p id="risultatoEta"></p>
+    </section>
+
+    <hr>
+
+    <section>
+
+        <h3>Esercizio Extra</h3>
+
+        <div id="extra">
+            <button onclick="esercizioExtra()">Clicca qui per mostrare l'esercizio completato</button>
+            <span id="scopri"></span>
+        </div>
+
+    </section>
+
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/operazioni-fondamentali.js"></script>
+    <script src="assets/js/age-check.js"></script>
+</body>
+
+</html>
