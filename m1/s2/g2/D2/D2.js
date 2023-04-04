@@ -51,9 +51,9 @@ let x = 12;
 */
 
 /*
-nome = "Frattali";
+nome = "Parlato";
 
-const NOME = "Frattali";
+const NOME = "Parlato";
 console.log(NOME);
 
 NOME = "pippo";
