@@ -26,12 +26,9 @@ a:visited {
     display: flex;
 }
 
-#menu li {
+#menu li, #menu a {
     padding: 0.5rem 0;
-    margin-right: 30px;
-}
-
-#menu a {
+    margin-right: 15px;
     color: white;
     text-decoration: none;
 }
@@ -87,48 +84,36 @@ a:visited {
     justify-content: space-between;
 }
 
-#img1 {
-    background-image: url(../img/img_1.jpg);
-    background-size: cover;
-    background-position: center;
+.card{
     -webkit-box-shadow: 10px 10px 23px 0px #979797;
     box-shadow: 10px 10px 23px 0px #979797;
     border-radius: 20px;
     width: 400px;
     height: 500px;
+}
+
+#img1 {
+    background-image: url(../img/img_1.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 #img2 {
     background-image: url(../img/img_2.jpg);
     background-size: cover;
     background-position: center;
-    -webkit-box-shadow: 10px 10px 23px 0px #979797;
-    box-shadow: 10px 10px 23px 0px #979797;
-    border-radius: 20px;
-    width: 400px;
-    height: 500px;
 }
 
 #img3 {
     background-image: url(../img/img_3.jpg);
     background-size: cover;
     background-position: center;
-    -webkit-box-shadow: 10px 10px 23px 0px #979797;
-    box-shadow: 10px 10px 23px 0px #979797;
-    border-radius: 20px;
-    width: 400px;
-    height: 500px;
 }
 
 #img4 {
     background-image: url(../img/img_4.jpg);
     background-size: cover;
     background-position: center;
-    -webkit-box-shadow: 10px 10px 23px 0px #979797;
-    box-shadow: 10px 10px 23px 0px #979797;
-    border-radius: 20px;
-    width: 400px;
-    height: 500px;
 }
 
 #playGame{
@@ -185,7 +170,6 @@ footer a{
 .container {
     background-color: #e9edee;
     padding: 30px;
-
 }
 
 .title h3 {
