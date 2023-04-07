@@ -226,7 +226,6 @@ switch (true) {
 
   default:
     console.log('Nessuno dei casi');
-    console.log(totalMass);
     break;
 }
 
