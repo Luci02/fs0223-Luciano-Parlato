@@ -79,7 +79,7 @@ function epify(str) {
 function check3and7(n) {
     if (n % 3 == 0 || n % 7 == 0) {
         return 'Il numero è un modulo di 3 o 7'
-    }else{
+    } else {
         return 'Il numero non è un modulo di 3 o di 7'
     }
 }
@@ -111,11 +111,11 @@ function upperFirst(str) {
     newStr = str[0].toUpperCase(); //Capitalizzo la prima lettera della frase
 
     for (let index = 1; index < str.length; index++) {
-        if(str[index] == ' '){
+        if (str[index] == ' ') {
             newStr += str[index];
-            newStr += str[index+1].toUpperCase();
+            newStr += str[index + 1].toUpperCase();
             index++;
-        }else{
+        } else {
             newStr += str[index];
         }
     }
@@ -130,7 +130,7 @@ function upperFirst(str) {
 function cutString(str) {
     let newStr = '';
 
-    for (let i = 1; i < str.length-1; i++) {
+    for (let i = 1; i < str.length - 1; i++) {
         newStr += str[i];
     }
     return newStr;
