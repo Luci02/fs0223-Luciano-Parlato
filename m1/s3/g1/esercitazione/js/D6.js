@@ -103,24 +103,27 @@ function reverseString(str) {
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-function upperFirst(str) {
-    let newStr = [];
+function upperFirst(string) {
 
-    str = str.trim();
-    str.split('');
-    newStr = str[0].toUpperCase(); //Capitalizzo la prima lettera della frase
+    let wordsArray = string.split(' ');
+    let capitalizedWords = [];
 
-    for (let index = 1; index < str.length; index++) {
-        if (str[index] == ' ') {
-            newStr += str[index];
-            newStr += str[index + 1].toUpperCase();
-            index++;
-        } else {
-            newStr += str[index];
-        }
+    for(let word of wordsArray) {
+
+        let firstLetter = word[0].toUpperCase();
+        word = firstLetter + word.slice(1);
+        capitalizedWords.push(word);
+
     }
-    return newStr;
+
+    return capitalizedWords.join(' ');
+
 }
+
+let risultato = upperFirst("la funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa");
+
+console.log(risultato);
+
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
