@@ -129,11 +129,8 @@ const makeItClickable = function () {
 
 }
 
-{
-   let h1 = document.querySelector('h1');
-
-   h1.addEventListener('click', makeItClickable);
-}
+document.querySelector('h1')
+.addEventListener('click', makeItClickable);
 
 /* ESERCIZIO 10
    Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
@@ -145,11 +142,8 @@ const revealFooterLink = function () {
 
 }
 
-{
-   let footer = document.querySelector('footer');
-
-   footer.addEventListener('click', revealFooterLink);
-}
+document.querySelector('footer')
+.addEventListener('click', revealFooterLink);
 
 /* ESERCIZIO 11
    Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
@@ -162,36 +156,57 @@ const revealFooterLink = function () {
 
 const generateTable = function () {
 
-   let arrayCategorie = ['immagine', 'nome prodotto', 'quantità', 'prezzo'];
+   let target = document.querySelector('#table-area');
 
-   //selettore tableArea
-   let tableArea = document.querySelector('#tableArea');
-   //Variabili per Creazione Elementi
-   let createTable = document.createElement('table');
-   let createThead = document.createElement('thead');
-   let createTBody = document.createElement('tbody');
-   let createTr = document.createElement('tr');
-   let createTd = document.createElement('td');
-   let createTh = document.createElement('th');
-   
-   //creo tag table e lo stampo
-   tableArea.append(createTable);
-   let tabella = document.querySelector('table');
-   tabella.style.border = '1px solid #000';
+   let tabella = document.createElement('table');
+   let thead = document.createElement('thead');
+   let primaTr = document.createElement('tr');
 
-   //creo il tag thead
-   tabella.append(createThead);
-   let tHead = document.querySelector('thead');
+   thead.append(primaTr);
+   tabella.append(thead);
+   target.append(tabella);
 
-   tHead.append(createTr);
-   let rigaIntestazioni = document.querySelector('tr');
+   let colonne = ['immagine', 'nome prodotto', 'quantità', 'prezzo'];
 
-   for (let i = 0; i < arrayCategorie.length; i++) {
-      
+   for(let colonna of colonne){
+      let th = document.createElement('th');
+      th.textContent = colonna;
+      primaTr.append(th);
    }
-   
-   //creo il tag tbody
-   tabella.append(createTBody);
+
+   let dati = [
+      {
+         immagine: 'urlimmagine',
+         nome_prodotto: 'lorem ipsum',
+         quantità: 1000,
+         prezzo: 193458
+      },
+      {
+         immagine: 'urlimmagine',
+         nome_prodotto: 'lorem ipsum',
+         quantità: 34,
+         prezzo: 19087
+      },
+      {
+         immagine: 'urlimmagine',
+         nome_prodotto: 'lorem ipsum',
+         quantità: 75,
+         prezzo: 1124
+      },
+      {
+         immagine: 'urlimmagine',
+         nome_prodotto: 'lorem ipsum',
+         quantità: 12,
+         prezzo: 113
+      },
+      {
+         immagine: 'urlimmagine',
+         nome_prodotto: 'lorem ipsum',
+         quantità: 9078,
+         prezzo: 1124
+      }
+   ];
+
 }
 
 generateTable();
