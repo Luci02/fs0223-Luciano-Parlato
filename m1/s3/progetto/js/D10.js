@@ -570,11 +570,11 @@ function addTestClassToTd() {
 
 */
 
-function halfTree( n ) {
+function halfTree(n) {
 
-  for (let i = 0; i < n; i++) {   
+  for (let i = 0; i < n; i++) {
     let row = '';
-    
+
     for (let j = 0; j <= i; j++) {
       row += '*';
     }
@@ -597,16 +597,16 @@ halfTree(4);
 
 */
 
-function tree(height) {
+function tree(n) {
 
-  for (let i = 0; i < height; i++) {
+  for (let i = 0; i < n; i++) {
     let row = '';
 
-    for (let j = 0; j < height - i; j++) {
+    for (let x = 0; x < n - i; x++) {
       row += ' ';
     }
 
-    for (let k = 0; k < (i * 2) + 1; k++) {
+    for (let y = 0; y < (i * 2) + 1; y++) {
       row += '*';
     }
 
@@ -622,16 +622,16 @@ tree(5)
 
 function isItPrime(num) {
 
-  if(num <= 1) {
+  if (num <= 1) {
     return false;
   }
-  
-  for(let i = 2; i <= Math.sqrt(num); i++) {
-    if(num % i == 0) {
+
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
       return false;
     }
   }
-  
+
   return true;
 }
 
