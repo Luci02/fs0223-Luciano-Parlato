@@ -489,6 +489,7 @@ console.log(removeIndex(8));
 
 function selectIdContainer() {
   let container = document.querySelector('#container');
+  return container;
 }
 
 /* ESERCIZIO 21
@@ -497,6 +498,7 @@ function selectIdContainer() {
 
 function selectTd() {
   let td = document.querySelectorAll('td');
+  return td;
 }
 
 /* ESERCIZIO 22
