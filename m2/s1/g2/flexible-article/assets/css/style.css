@@ -1,0 +1,28 @@
+* {
+    font-family: sans-serif;
+}
+
+.main-content{
+    background-color: #fff9db;
+    color: #622d1a;
+    padding: 20px;
+    display: flex;
+}
+
+.text{
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 1025px) {
+    .main-content{
+        flex-direction: column-reverse;
+    }
+
+    .main-content img{
+        max-width: 100%;
+    }
+
+    .text {
+        margin: unset;
+    }
+}
