@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+/* TAG GENERALI */
+
+body {
+    background-color: rgb(107, 108, 109);
+    font-family: 'Indie Flower', cursive;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+/* CLASSI CUSTOM */
+
+.lavagna {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.postit {
+    width: 300px;
+    height: 230px;
+    margin: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-shadow: 5px 5px 7px 1px #575757;
+    box-shadow: 5px 5px 7px 1px #575757;
+    transition: all .5s linear;
+}
+
+.lavagna .postit:hover {
+    rotate: 0deg;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+    scale: 1.3;
+}
+
+/* SELEZIONO I FIGLI PARI DI LAVAGNA */
+.lavagna div:nth-child(even) {
+    rotate: 10deg;
+}
+
+/* SELEZIONO I FIGLI DISPARI DI LAVAGNA */
+.lavagna div:nth-child(odd) {
+    rotate: -10deg;
+}
+
+/* COLORI */
+
+.yellow {
+    background-color: rgb(255, 255, 196);
+}
+
+.green {
+    background-color: rgb(212, 255, 212);
+}
+
+.purple {
+    background-color: rgb(183, 170, 255);
+}
