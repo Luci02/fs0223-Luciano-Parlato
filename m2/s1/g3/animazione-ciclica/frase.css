@@ -9,74 +9,48 @@
 */
 
 #testoAlternato{
-    border: 2px solid grey;
+    width: 50%;
+    margin: 100px auto;
     padding: 20px;
-    margin: 20px;
+    border: 2px solid grey;
 }
 
-.parole{
-    color: blue;
+span{
     position: relative;
 }
 
-i {
+i{
+    width: 400px;
     position: absolute;
-    left: 10px;
-    width: 250px;
+    left: 5px;
+    color: rgb(101, 204, 252);
+    font-weight: bold;
 }
 
-i:nth-child(1){
-    animation: animazione1 6s linear 0s infinite;
+i:first-child{
+    animation: fadeInOut 6s linear 0s infinite;
 }
+
 i:nth-child(2){
     opacity: 0;
-    animation: animazione2 6s linear 2s infinite;
+    animation: fadeInOut 6s linear 2s infinite;
 }
+
 i:nth-child(3){
     opacity: 0;
-    animation: animazione3 6s linear 4s infinite;
+    animation: fadeInOut 6s linear 4s infinite;
 }
 
-@keyframes animazione1{
-    0%{
-        opacity: 100%;
-        transform: translate(0px);
-    }
-    20%{
-        opacity: 0%;
-    }
-    100%{
-        opacity: 0%;
-        transform: translateY(100px);
-    }
+@keyframes fadeInOut{
+0%{
+    opacity: 0;
+    transform: translateY(-20px);
 }
-
-@keyframes animazione2{
-    0%{
-        opacity: 100%;
-        transform: translate(0px);
-    }
-    20%{
-        opacity: 0%;
-        transform: translate(0px);
-    }
-    100%{
-        opacity: 0%;
-        transform: translateY(100px);
-    }
+33%{
+    opacity: 1;
 }
-
-@keyframes animazione3{
-    0%{
-        opacity: 100%;
-        transform: translate(0px);
-    }
-    20%{
-        opacity: 0%;
-        transform: translate(0px);
-    }
-    100%{
-        opacity: 0%;
-        transform: translateY(100px);
-    }
+100%{
+    opacity: 0;
+    transform: translateY(15px);
+}
 }
