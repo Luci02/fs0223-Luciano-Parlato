@@ -4,23 +4,29 @@
 /* font-family: 'Roboto', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: rgba(41, 41, 41, 1);
 }
 
 /* CLASSI GENERALI */
 
-.rounded-circle{
+.rounded-circle {
     border-radius: 100%;
 }
 
-.square-smooth{
+.square-smooth {
     border-radius: 5px;
 }
 
 /* NAVBAR */
 
-.main-navbar{
+.main-navbar {
     font-size: .9em;
     display: flex;
     justify-content: space-around;
@@ -30,17 +36,17 @@ body{
     border-bottom: 1px solid black;
 }
 
-.main-navbar ul{
+.main-navbar ul {
     list-style-type: none;
     display: flex;
     align-items: center;
 }
 
-.main-navbar ul li{
+.main-navbar ul li {
     margin-left: 25px;
 }
 
-.main-navbar ul li:last-child{
+.main-navbar ul li:last-child {
     background-color: black;
     color: white;
     padding: 10px 20px;
@@ -49,7 +55,7 @@ body{
 
 /* HEADER */
 
-.main-header{
+.main-header {
     background-color: #ffc017;
     border-bottom: 1px solid black;
     display: flex;
@@ -57,27 +63,27 @@ body{
     align-items: center;
 }
 
-h1{
+h1 {
     font-family: 'Spectral', serif;
     font-size: 7em;
     letter-spacing: -9px;
     margin-bottom: 25px;
 }
 
-.main-header div:first-child{
+.main-header div:first-child {
     margin-left: 12%;
 }
 
-.main-header p{
+.main-header p {
     color: #191919;
     font-size: 1.3em;
 }
 
-.main-header p:last-of-type{
+.main-header p:last-of-type {
     margin-bottom: 50px;
 }
 
-.main-header button{
+.main-header button {
     background-color: #191919;
     color: white;
     font-size: 1em;
@@ -89,27 +95,27 @@ h1{
 
 /* TRENDING SECTION */
 
-.trend-card-container{
+.trend-card-container {
     margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
-#trending-section{
+#trending-section {
     border-bottom: 1px solid rgb(235, 235, 235);
 }
 
-.trending-container{
+.trending-container {
     margin: 50px 12%;
 }
 
-.trend-title{
+.trend-title {
     display: flex;
     align-items: center;
 }
 
-.trend-title h3{
+.trend-title h3 {
     color: #191919;
     font-size: .9em;
     font-weight: 900;
@@ -118,51 +124,91 @@ h1{
 
 /* TRENDING ARTICLE CSS */
 
-.trend-card{
+.trend-card {
     display: flex;
     width: 350px;
     margin-bottom: 50px;
 }
 
-.number{
+.number {
     font-size: 32px;
     font-weight: bold;
     color: rgba(230, 230, 230, 1);
     margin-right: 20px;
 }
 
-.card-content header{
+.card-content header {
     display: flex;
     align-items: center;
     font-size: 13px;
 }
 
-.card-content img{
+.card-content img {
     width: 20px;
 }
 
-.card-content header p{
+.card-content header p {
     font-weight: 500;
     margin-left: 10px;
 }
 
-.card-content header p span{
+.card-content header p span {
     color: #757575;
     font-weight: 400;
 }
 
-.card-content h4{
+.card-content h4 {
     font-weight: 900;
     margin: 10px 0;
 }
 
-.card-content footer{
+.card-content footer {
     display: flex;
     align-items: center;
     color: rgba(117, 117, 117, 1);
     font-size: 13px;
 }
 
-.card-content footer img{
+.card-content footer img {
     margin-left: 5px;
+}
+
+/* ARTICLES CONTAINER CSS */
+
+#article-sidebar {
+    margin-top: 50px;
+}
+
+/* SINGLE ARTICLE CSS */
+.article{
+    display: flex;
+}
+
+.article-author{
+    display: flex;
+    align-items: center;
+    font-size: .9em;
+    font-weight: 500;
+}
+/* SIDEBAR CSS */
+
+aside h4{
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category {
+    background-color: rgba(242, 242, 242, 1);
+    border-radius: 50px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.category:hover{
+    background-color: rgba(230, 230, 230, 1);
 }
