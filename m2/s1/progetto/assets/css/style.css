@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
 
 /* font-family: 'Roboto', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -89,6 +89,13 @@ h1{
 
 /* TRENDING SECTION */
 
+.trend-card-container{
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 #trending-section{
     border-bottom: 1px solid rgb(235, 235, 235);
 }
@@ -105,7 +112,7 @@ h1{
 .trend-title h3{
     color: #191919;
     font-size: .9em;
-    font-weight: bold;
+    font-weight: 900;
     margin-left: 10px;
 }
 
@@ -113,7 +120,8 @@ h1{
 
 .trend-card{
     display: flex;
-    flex-wrap: wrap;
+    width: 350px;
+    margin-bottom: 50px;
 }
 
 .number{
@@ -126,7 +134,7 @@ h1{
 .card-content header{
     display: flex;
     align-items: center;
-    font-weight: bold;
+    font-size: 13px;
 }
 
 .card-content img{
@@ -134,14 +142,27 @@ h1{
 }
 
 .card-content header p{
+    font-weight: 500;
     margin-left: 10px;
 }
 
+.card-content header p span{
+    color: #757575;
+    font-weight: 400;
+}
+
 .card-content h4{
-    font-weight: bold;
+    font-weight: 900;
     margin: 10px 0;
 }
 
 .card-content footer{
+    display: flex;
+    align-items: center;
     color: rgba(117, 117, 117, 1);
+    font-size: 13px;
+}
+
+.card-content footer img{
+    margin-left: 5px;
 }
