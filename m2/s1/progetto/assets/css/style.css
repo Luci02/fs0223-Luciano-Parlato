@@ -23,7 +23,6 @@ a:visited {
 .square-smooth {
     border-radius: 5px;
 }
-
 /* NAVBAR */
 
 .main-navbar {
@@ -181,12 +180,7 @@ h1 {
 }
 
 .article-container{
-    max-width: 60%;
-}
-
-aside{
-    max-width: 40%;
-    margin: 0 20px;
+    max-width: 70%;
 }
 
 /* SINGLE ARTICLE CSS */
@@ -264,14 +258,21 @@ aside{
 
 /* SIDEBAR CSS */
 
+aside{
+    max-width: 30%;
+    margin-left: 5%;
+}
+
 aside h4{
     font-weight: 500;
     font-size: 1em;
+    margin-bottom: 20px;
 }
 
 .categories{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .category {
@@ -283,4 +284,8 @@ aside h4{
 
 .category:hover{
     background-color: rgba(230, 230, 230, 1);
+}
+
+aside footer{
+    color: rgba(117, 117, 117, 1);
 }
