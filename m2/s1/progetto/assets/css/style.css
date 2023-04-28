@@ -1,0 +1,147 @@
+/* font-family: 'Spectral', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
+
+/* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* CLASSI GENERALI */
+
+.rounded-circle{
+    border-radius: 100%;
+}
+
+.square-smooth{
+    border-radius: 5px;
+}
+
+/* NAVBAR */
+
+.main-navbar{
+    font-size: .9em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffc017;
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+}
+
+.main-navbar ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-navbar ul li{
+    margin-left: 25px;
+}
+
+.main-navbar ul li:last-child{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+/* HEADER */
+
+.main-header{
+    background-color: #ffc017;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Spectral', serif;
+    font-size: 7em;
+    letter-spacing: -9px;
+    margin-bottom: 25px;
+}
+
+.main-header div:first-child{
+    margin-left: 12%;
+}
+
+.main-header p{
+    color: #191919;
+    font-size: 1.3em;
+}
+
+.main-header p:last-of-type{
+    margin-bottom: 50px;
+}
+
+.main-header button{
+    background-color: #191919;
+    color: white;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 50px;
+}
+
+/* TRENDING SECTION */
+
+#trending-section{
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.trending-container{
+    margin: 50px 12%;
+}
+
+.trend-title{
+    display: flex;
+    align-items: center;
+}
+
+.trend-title h3{
+    color: #191919;
+    font-size: .9em;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* TRENDING ARTICLE CSS */
+
+.trend-card{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.number{
+    font-size: 32px;
+    font-weight: bold;
+    color: rgba(230, 230, 230, 1);
+    margin-right: 20px;
+}
+
+.card-content header{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.card-content img{
+    width: 20px;
+}
+
+.card-content header p{
+    margin-left: 10px;
+}
+
+.card-content h4{
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.card-content footer{
+    color: rgba(117, 117, 117, 1);
+}
