@@ -71,7 +71,7 @@ h1 {
 }
 
 .main-header div:first-child {
-    margin-left: 12%;
+    margin-left: 10%;
 }
 
 .main-header p {
@@ -107,7 +107,7 @@ h1 {
 }
 
 .trending-container {
-    margin: 50px 12%;
+    margin: 50px 10%;
 }
 
 .trend-title {
@@ -176,12 +176,23 @@ h1 {
 /* ARTICLES CONTAINER CSS */
 
 #article-sidebar {
-    margin-top: 50px;
+    margin: 50px 10% 0;
+    display: flex;
+}
+
+.article-container{
+    max-width: 60%;
+}
+
+aside{
+    max-width: 40%;
+    margin: 0 20px;
 }
 
 /* SINGLE ARTICLE CSS */
 .article{
     display: flex;
+    margin-bottom: 30px;
 }
 
 .article-author{
@@ -190,6 +201,67 @@ h1 {
     font-size: .9em;
     font-weight: 500;
 }
+
+.article-author img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.article-author p span{
+    color: #757575;
+    font-weight: 400;
+}
+
+.article > img{
+    width: 200px;
+    object-fit: contain;
+}
+
+.content{
+    margin-right: 20px;
+    flex-grow: 1;
+}
+
+.content h4{
+    color: #191919;
+    font-weight: 900;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.content main, .content footer{
+    color: #757575;
+}
+
+.content main{
+    display: flex;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+.content footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content footer div{
+    display: flex;
+    align-items: center;
+}
+
+.content footer span{
+    background-color: rgba(242, 242, 242, 1);
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+.content footer div img{
+    margin-left: 5px;
+}
+
 /* SIDEBAR CSS */
 
 aside h4{
