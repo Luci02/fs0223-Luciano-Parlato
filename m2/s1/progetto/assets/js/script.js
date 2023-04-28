@@ -9,3 +9,10 @@ document.addEventListener('scroll', function(){
     }
 });
 
+let paths = document.querySelectorAll("g[opacity='1'] path");
+
+setInterval(() => {
+    let randInt = Math.floor(Math.random() * (paths.length - 1));
+    let randBool = Math.floor(Math.random() * 2);
+    paths[randInt].parentElement.style.opacity = randBool;
+}, 200)
