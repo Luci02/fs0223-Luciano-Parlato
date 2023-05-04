@@ -6,6 +6,10 @@
 @import 'partials/mixins';
 @import 'partials/animations';
 
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
 header{
     background-color: $bg-hero;
     h1{

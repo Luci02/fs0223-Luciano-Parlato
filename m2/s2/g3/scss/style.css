@@ -22,6 +22,10 @@ ul, li {
   color: #4caf50;
 }
 
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 header {
   background-color: #640fc5;
 }
