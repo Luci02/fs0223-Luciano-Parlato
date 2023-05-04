@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eveline-R</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <style>
+      .navbar img {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <!--
+
+
+
+EXTRAS
+
+12) Crea un bottone vicino ad ogni sezione per collassarla e riaprirla se premuto.
+
+13) Crea la possibilità di contare il numero di "viaggi" presenti sulla pagina e visualizzare il risultato in un alert.
+
+14) Crea un modale con un campo email e un messaggio.
+
+15) Quando l'utente cliccherà su "Contattaci", il modale dovrà essere visualizzato.
+
+16) Crea una funzione che aggiunga un badge con la scritta "HOT" su ognuna delle offerte "Welcome Summer" posizionato in alto a destra.
+
+17) Crea una funzione che rimuova tutte le "card" dalla pagina
+
+-->
+  <body>
+    <!-- INIZIO HEADER -->
+    <header>
+      <!-- INIZIO NAVBAR -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary px-5">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#saldi">Saldi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#welcome-summer"
+                  >Welcome Summer</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#last-minute"
+                  >Last Minute</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#recensioni"
+                  >Recensioni</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Cerca posti da sogno"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-danger" type="submit">
+                Cerca
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- FINE NAVBAR -->
+
+      <div class="container my-5 p-5 bg-body-tertiary rounded-2">
+        <div class="row flex-column text-secondary">
+          <div class="col p-0 border border-top-0 border-end-0 border-start-0">
+            <h1 class="fw-normal">
+              Eveline-R
+              <span class="fs-6 fw-light align-middle">— Feel the Freedom</span>
+            </h1>
+          </div>
+          <div class="col p-0 my-2">
+            <p class="fst-italic">
+              Scopri le destinazioni più calde del momento!
+            </p>
+          </div>
+          <div class="col p-0">
+            <button class="btn btn-info text-white fw-medium px-5">
+              Prenota ora
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- FINE HEADER -->
+
+    <!-- INIZIO MAIN -->
+    <main>
+      <!-- INIZIO SEZIONE SALDI -->
+      <section id="saldi">
+        <div class="container my-5">
+          <!-- INTESTAZIONE SEZIONE -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <p class="fs-3 fw-medium m-0">Saldi</p>
+            <a href="" class="link-info text-decoration-none">
+              Nascondi sezione
+            </a>
+          </div>
+          <!-- CORPO SEZIONE -->
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
+            <div class="col mb-2">
+              <div class="card border border-info border-2">
+                <img
+                  src="img/montreal.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Discounted price for this destination"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-capitalize">Montreal</h5>
+                  <h6 class="card-subtitle text-capitalize">Canada</h6>
+                  <p class="card-text my-3">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-2">
+              <div class="card border-info border-2">
+                <img
+                  src="img/canberra.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Discounted price for this destination"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-capitalize">Canberra</h5>
+                  <h6 class="card-subtitle text-capitalize">Australia</h6>
+                  <p class="card-text my-3">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-2 d-md-none d-lg-block">
+              <div class="card border border-info border-2">
+                <img
+                  src="img/daytona-beach.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Discounted price for this destination"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-capitalize">Daytona Beach</h5>
+                  <h6 class="card-subtitle text-capitalize">Stati Uniti</h6>
+                  <p class="card-text my-3">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-2">
+              <div class="card border border-info border-2">
+                <img
+                  src="img/venezia.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Discounted price for this destination"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-capitalize">Venezia</h5>
+                  <h6 class="card-subtitle text-capitalize">Italia</h6>
+                  <p class="card-text my-3">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FINE SEZIONE SALDI -->
+
+      <!-- INIZIO SEZIONE WELCOME SUMMER -->
+      <section id="welcome-summer">
+        <div class="container my-5">
+          <!-- INTESTAZIONE SEZIONE -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <p class="fs-3 fw-medium m-0">Welcome Summer</p>
+            <a href="" class="link-info text-decoration-none">
+              Nascondi sezione
+            </a>
+          </div>
+          <!-- CORPO SEZIONE -->
+          <div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-6">
+            <div class="col mb-2">
+              <div class="card border-0 shadow-lg">
+                <img
+                  src="img/montreal.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Discounted price for this destination"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-capitalize">Montreal</h5>
+                  <h6 class="card-subtitle text-capitalize">Canada</h6>
+                  <p class="card-text my-3">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-2">
+              <div class="card border-0 shadow-lg">
+                <img
+                  src="img/canberra.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Discounted price for this destination"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-capitalize">Canberra</h5>
+                  <h6 class="card-subtitle text-capitalize">Australia</h6>
+                  <p class="card-text my-3">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-2 d-md-none d-lg-block">
+              <div class="card border-0 shadow-lg">
+                <img
+                  src="img/daytona-beach.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Discounted price for this destination"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-capitalize">Daytona Beach</h5>
+                  <h6 class="card-subtitle text-capitalize">Stati Uniti</h6>
+                  <p class="card-text my-3">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-2">
+              <div class="card border-0 shadow-lg">
+                <img
+                  src="img/venezia.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Discounted price for this destination"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-capitalize">Venezia</h5>
+                  <h6 class="card-subtitle text-capitalize">Italia</h6>
+                  <p class="card-text my-3">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-2">
+              <div class="card border-0 shadow-lg">
+                <img
+                  src="img/helsinki.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Discounted price for this destination"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-capitalize">Helsinki</h5>
+                  <h6 class="card-subtitle text-capitalize">Finlandia</h6>
+                  <p class="card-text my-3">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+            <div class="col mb-2">
+              <div class="card border-0 shadow-lg">
+                <img
+                  src="img/copenhagen.jpg"
+                  class="card-img-top img-fluid"
+                  alt="Discounted price for this destination"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-capitalize">Copenaghen</h5>
+                  <h6 class="card-subtitle text-capitalize">Danimarca</h6>
+                  <p class="card-text my-3">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-info">Prenota</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FINE SEZIONE WELCOME SUMMER -->
+
+      <!-- INIZIO SEZIONE OFFERTA DEL GIORNO -->
+      <section id="offerta-del-giorno">
+        <div class="container d-none d-md-block my-5">
+          <!-- INTESTAZIONE SEZIONE -->
+          <div class="row">
+            <p class="fs-3 fw-medium m-0">Offerta del giorno</p>
+          </div>
+          <!-- CORPO SEZIONE -->
+          <div class="row">
+            <div class="col-8">
+              <img
+                class="img-fluid rounded-3 shadow"
+                src="img/maldive.jpg"
+                alt="Immagine destinazione in offerta del giorno"
+              />
+            </div>
+            <div class="col-4">
+              <p class="m-0 fs-1 fw-light">Fushifaru Maldives</p>
+              <p class="m-0 font-monospace text-secondary">
+                15.01.2021 - 31.01.2021
+              </p>
+              <p class="my-3 fs-3 fw-light lead">
+                Ville a partire da 500 €, non fartele sfuggire!
+              </p>
+              <span class="badge rounded-pill text-bg-dark">Best offer</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FINE SEZIONE OFFERTA DEL GIORNO -->
+
+      <!-- INIZIO SEZIONE LAST MINUTE -->
+      <section id="last-minute">
+        <div class="container my-5">
+          <!-- INTESTAZIONE SEZIONE -->
+          <div class="row">
+            <div class="col">
+              <p class="fs-3 fw-medium m-0">Last Minute</p>
+            </div>
+          </div>
+          <!-- CORPO SEZIONE -->
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6">
+            <div class="col mb-3">
+              <img
+                class="img-fluid shadow"
+                src="img/salem.jpg"
+                alt="Last Minute Destination"
+              />
+            </div>
+            <div class="col mb-3">
+              <img
+                class="img-fluid shadow"
+                src="img/Dijon.jpg"
+                alt="Last Minute Destination"
+              />
+            </div>
+            <div class="col mb-3">
+              <img
+                class="img-fluid shadow"
+                src="img/Park City.jpg"
+                alt="Last Minute Destination"
+              />
+            </div>
+            <div class="col mb-3">
+              <img
+                class="img-fluid shadow"
+                src="img/Santa-Fe.jpg"
+                alt="Last Minute Destination"
+              />
+            </div>
+            <div class="col mb-3">
+              <img
+                class="img-fluid shadow"
+                src="img/madrid.jpg"
+                alt="Last Minute Destination"
+              />
+            </div>
+            <div class="col mb-3">
+              <img
+                class="img-fluid shadow"
+                src="img/Abu-Dhabi.jpg"
+                alt="Last Minute Destination"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FINE SEZIONE LAST MINUTE -->
+
+      <!-- INIZIO SEZIONE RECENSIONI -->
+      <section id="recensioni">
+        <div class="container my-5">
+          <!-- INTESTAZIONE SEZIONE -->
+          <div class="row my-2">
+            <p class="fs-3 fw-medium m-0">Recensioni</p>
+          </div>
+          <!-- CORPO SEZIONE -->
+          <div class="row">
+            <div class="col-1">
+              <img
+                class="img-fluid rounded-circle border border-2 border-info"
+                src="img/user.png"
+                alt="user icon"
+              />
+            </div>
+            <div class="col">
+              <h6>Username</h6>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Tempora vel rem delectus illum nesciunt, rerum quam, placeat
+                repellendus obcaecati asperiores amet facere voluptatibus eum
+                modi harum quia deleniti assumenda dolorum.
+              </p>
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="col-1">
+              <img
+                class="img-fluid rounded-circle border border-2 border-info"
+                src="img/user.png"
+                alt="user icon"
+              />
+            </div>
+            <div class="col">
+              <h6>Username</h6>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Tempora vel rem delectus illum nesciunt, rerum quam, placeat
+                repellendus obcaecati asperiores amet facere voluptatibus eum
+                modi harum quia deleniti assumenda dolorum.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <img
+                class="img-fluid rounded-circle border border-2 border-info"
+                src="img/user.png"
+                alt="user icon"
+              />
+            </div>
+            <div class="col">
+              <h6>Username</h6>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Tempora vel rem delectus illum nesciunt, rerum quam, placeat
+                repellendus obcaecati asperiores amet facere voluptatibus eum
+                modi harum quia deleniti assumenda dolorum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FINE SEZIONE RECENSIONI -->
+    </main>
+    <!-- FINE MAIN -->
+
+    <!-- INIZIO FOOTER -->
+    <footer>
+      <div
+        class="container-fluid bg-dark d-flex flex-column py-5 justify-content-center align-items-center"
+      >
+        <button class="btn btn-outline-secondary">Contattaci</button>
+        <p class="my-3 text-white text-capitalize">
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-c-circle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"
+              />
+            </svg>
+          </span>
+          2021 kalina travel <span class="text-uppercase">ltd</span>. all rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- FINE FOOTER -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

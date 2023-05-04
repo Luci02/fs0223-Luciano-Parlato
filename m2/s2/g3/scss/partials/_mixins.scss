@@ -1,0 +1,7 @@
+@import 'fonts';
+
+@mixin title-big{
+    font: {
+        size: $font-size-title;
+    }
+}

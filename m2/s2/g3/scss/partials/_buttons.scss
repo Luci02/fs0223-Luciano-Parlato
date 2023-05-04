@@ -1,0 +1,8 @@
+@import 'colors';
+
+// creo dinamicamente le classi con i colori dei bottoni
+@each $colourName, $colour in $button-colors{
+    .button-#{$colourName}{
+        color: $colour;
+    }
+}
