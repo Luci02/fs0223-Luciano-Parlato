@@ -20,6 +20,7 @@ header{
         img{
             margin-right: auto;
             margin-left: 20px;
+            @include floating;
         }
         align-items: center;
         ul{
