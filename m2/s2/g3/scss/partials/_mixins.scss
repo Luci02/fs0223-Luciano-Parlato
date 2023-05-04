@@ -1,7 +1,14 @@
+@import 'colors';
 @import 'fonts';
 
 @mixin title-big{
     font: {
         size: $font-size-title;
     }
+}
+
+@mixin floating{
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 5px #000000;
+    border: 1px solid black;
 }
