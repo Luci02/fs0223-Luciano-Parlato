@@ -122,6 +122,9 @@ body footer#main-footer {
   color: black;
   background-color: #858585;
 }
+#account-body main #profile-img-section {
+  width: 50px;
+}
 
 @media (max-width: 767px) {
   .carousel-inner .carousel-item > div {
