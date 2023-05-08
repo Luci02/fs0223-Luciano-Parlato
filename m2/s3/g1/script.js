@@ -29,22 +29,25 @@ const user1 = new User('Luciano', 'Parlato', 20, 'Rozzano');
 
 const user2 = new User('John', 'Doe', 19, 'Milano');
 
-// console.log(user1.ageComparison(user2));
+console.log(user1.ageComparison(user2));
 
 
 // ESERCIZIO 2
 
-const Pet = function (petName, ownerName, species, breed) {
-    this.petName = petName || '';
-    this.ownerName = ownerName || '';
-    this.species = species || '';
-    this.breed = breed || '';
-    this.hasSameOwner = function(otherPet){
-        
-        return this.ownerName == otherPet.ownerName;
-        
+class Pet {
+    constructor(petName, ownerName, species, breed) {
+        this.petName = petName || '';
+        this.ownerName = ownerName || '';
+        this.species = species || '';
+        this.breed = breed || '';
+    }
+
+    static hasSameOwner = function (user1, user2) {
+        return user1 === user2;        
     }
 }
+
+let petsArray = [];
 
 let form = document.querySelector('form');
 form.addEventListener('submit', (e) => {
@@ -57,12 +60,17 @@ form.addEventListener('submit', (e) => {
     let breed = document.querySelector('#breed').value;
 
     let newPet = new Pet(petName, ownerName, species, breed);
+    petsArray.push(newPet);
 
     let petList = document.querySelector('#petList');
 
     let li = document.createElement('li');
-    li.textContent = `${newPet.petName} (${newPet.species}, ${newPet.breed}) - proprietario: ${newPet.ownerName}`;
+    li.textContent = `${newPet.petName} (specie: ${newPet.species}, razza: ${newPet.breed}) - proprietario: ${newPet.ownerName}`;
     petList.appendChild(li);
+
+    petsArray.forEach( (current, i) => {
+        console.log(Pet.hasSameOwner(current.ownerName, petsArray[i - 1] ? petsArray[i - 1].ownerName : petsArray[i].ownerName ));
+    } )
 
     document.querySelector('#petName').value = '';
     document.querySelector('#ownerName').value = '';
