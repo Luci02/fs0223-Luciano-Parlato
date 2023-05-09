@@ -27,38 +27,66 @@ removeName.addEventListener('click', () => {
 
 // ESERCIZIO 2
 
-let seconds = sessionStorage.getItem("secondi") || 0;
-let minutes = sessionStorage.getItem("minuti") || 0;
-let hours = sessionStorage.getItem("ore") || 0;
+sessionStorage.setItem("secondi", 0);
+sessionStorage.setItem("minuti", 0);
+sessionStorage.setItem("ore", 0);
 
+// INIZIALIZZO A 0 LO SPAN SECONDI
 let secondsContenitor = document.getElementById('secondi');
-secondsContenitor.innerText = seconds;
+secondsContenitor.innerText = sessionStorage.getItem("secondi");
 
+// INIZIALIZZO A 0 LO SPAN MINUTI
 let minutesContenitor = document.getElementById('minuti');
-minutesContenitor.innerText = minutes;
+minutesContenitor.innerText = sessionStorage.getItem("minuti");
 
+// INIZIALIZZO A 0 LO SPAN ORE
 let hoursContenitor = document.getElementById('ore');
-hoursContenitor.innerText = hours;
+hoursContenitor.innerText = sessionStorage.getItem("ore");
+
+// VARIABILI SECONDI, MINUTI, ORE
+let secondsCounter = 0;
+let minutesCounter = 0;
+let hoursCounter = 0;
 
 setInterval(() => {
-    let secondsCounter = sessionStorage.getItem("secondi");
     secondsCounter++;
-    sessionStorage.setItem("secondi", secondsCounter);
-    secondsContenitor.innerText = secondsCounter;
-
-    if(secondsCounter == 59){
+    if (secondsCounter > 59) {
         sessionStorage.setItem("secondi", 0);
-        let minutesCounter = sessionStorage.getItem("minuti");
-        if(minutesCounter < 60){
-            minutesCounter++;
-            sessionStorage.setItem("minuti", minutesCounter);
-            minutesContenitor.innerText = sessionStorage.getItem("minuti");
-        }else{
+        secondsCounter = sessionStorage.getItem("secondi");
+
+        minutesCounter++;
+        if(minutesCounter > 59){
             sessionStorage.setItem("minuti", 0);
-            let hoursCounter = sessionStorage.getItem('ore');
+            minutesCounter = sessionStorage.getItem("minuti");
+
             hoursCounter++;
-            sessionStorage.setItem('ore', hoursCounter);
+            sessionStorage.setItem("ore", hoursCounter);
             hoursContenitor.innerText = sessionStorage.getItem("ore");
         }
+        minutesContenitor.innerText = minutesCounter;
+        sessionStorage.setItem("minuti", minutesCounter);
+
     }
+    secondsContenitor.innerText = secondsCounter;
+    sessionStorage.setItem("secondi", secondsCounter);
+
+    
+
 }, 1000);
+
+// setInterval(() => {
+
+//     console.log(seconds, typeof seconds);
+//     seconds++;
+//     sessionStorage.setItem("secondi", seconds);
+//     secondsContenitor.innerText = seconds;
+
+//     if(seconds == 60){
+
+//         minutes++;
+//         sessionStorage.setItem("minuti", minutes);
+//         minutesContenitor.innerText = minutes;
+
+//     }
+
+// }, 1000);
