@@ -42,8 +42,12 @@ class Pet {
         this.breed = breed || '';
     }
 
-    static hasSameOwner = function (user1, user2) {
-        return user1 === user2;        
+    hasSameOwner = function (otherPet) {
+        if(this.ownerName === otherPet.ownerName)  {
+            return true
+        }else{
+            return false
+        }
     }
 }
 
@@ -65,16 +69,13 @@ form.addEventListener('submit', (e) => {
     let petList = document.querySelector('#petList');
 
     let li = document.createElement('li');
-    li.textContent = `${newPet.petName} (specie: ${newPet.species}, razza: ${newPet.breed}) - proprietario: ${newPet.ownerName}`;
+    li.textContent = `Il suo nome è ${newPet.petName} (specie: ${newPet.species}, razza: ${newPet.breed}) - proprietario: ${newPet.ownerName}`;
     petList.appendChild(li);
-
-    petsArray.forEach( (current, i) => {
-        console.log(Pet.hasSameOwner(current.ownerName, petsArray[i - 1] ? petsArray[i - 1].ownerName : petsArray[i].ownerName ));
-    } )
 
     document.querySelector('#petName').value = '';
     document.querySelector('#ownerName').value = '';
     document.querySelector('#species').value = '';
     document.querySelector('#breed').value = '';
 
+    document.querySelector('#petName').focus();
 });
