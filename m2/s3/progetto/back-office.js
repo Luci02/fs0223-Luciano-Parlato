@@ -89,8 +89,6 @@ let createModifyEvent = function(){
                 alert("Operazione annullata");
             }
         })
-
-        // inserire la fetch qui se non funziona
     }
 
     const productForm = document.getElementById('save-modify-product');
