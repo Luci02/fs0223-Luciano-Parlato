@@ -16,7 +16,7 @@
 </head>
 <body class="d-flex flex-column bg-body-secondary">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="container-fluid">
               <a class="navbar-brand text-light d-flex align-items-center" href="index.html">
                 <img class="mx-3" src="img/sacchetti.svg" alt="Logo" width="30" />
@@ -37,13 +37,11 @@
             </div>
           </nav>
     </header>
-    <main class="container flex-grow-1">
-        <div id="warning-container" class="container-fluid fs-1 text-danger text-center h-100 d-flex flex-column justify-content-center">
+    <main class="container d-flex flex-column flex-grow-1">
+        <div id="warning-container" class="container-fluid fs-1 text-danger text-center my-auto">
             <i class="bi bi-exclamation-octagon-fill"></i>
             <p>Non sono presenti prodotti nello store</p>
-            <a href="back-office.html">
-                <button class="btn btn-outline-primary" type="button">Aggiungi il tuo primo prodotto</button>
-            </a>
+            <a href="back-office.html" class="btn btn-outline-primary">Aggiungi il tuo primo prodotto</a>
         </div>
         <div class="row" id="products-container"></div>
     </main>

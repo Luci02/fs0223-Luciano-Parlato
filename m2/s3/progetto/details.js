@@ -1,4 +1,9 @@
-// product-container
+// Funzione che aggiunge l'anno al footer della pagina
+let footerYear = function(){
+    let spanYear = document.getElementById('footer-year');
+    spanYear.innerText = new Date().getFullYear();
+}
+
 let loadProduct = function(){
     const URL = 'https://striveschool-api.herokuapp.com/api/product/';
     const KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlMTdkMDg4Zjc0MDAwMTQyODc1ZWEiLCJpYXQiOjE2ODM4ODgwODAsImV4cCI6MTY4NTA5NzY4MH0.d17UDiic9aA3MmNZEOCdXxXqDc4OWjkNmApeqaiGvaA';
@@ -21,8 +26,8 @@ let loadProduct = function(){
         let productContainer = document.getElementById('product-container');
 
         productContainer.innerHTML += `
-        <div class="row d-flex">
-            <div class="col">
+        <div class="row d-flex flex-column flex-lg-row">
+            <div class="col text-center">
                 <img class="img-fluid" src="${product.imageUrl}" alt="Product Image" />
             </div>
             <div class="col">
@@ -46,4 +51,5 @@ let loadProduct = function(){
 
 window.onload = function(){
     loadProduct();
+    footerYear();
 }
