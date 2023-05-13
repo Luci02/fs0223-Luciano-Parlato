@@ -96,7 +96,6 @@ let createModifyEvent = function(){
     const productForm = document.getElementById('save-modify-product');
     productForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        console.log(new Product());
         fetch( productId ? URL + productId : URL, {
             method: productId ? 'PUT' : 'POST',
             body: JSON.stringify(new Product()),
