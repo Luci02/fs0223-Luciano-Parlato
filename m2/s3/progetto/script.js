@@ -35,7 +35,7 @@ let getProducts = function(){
             `
         });
 
-        if(productsContainer.firstElementChild){
+        if(productsContainer.firstElementChild != null){
             let warningContainer = document.getElementById('warning-container');
             warningContainer.remove();
         }

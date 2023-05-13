@@ -22,16 +22,23 @@ let loadProduct = function(){
 
         productContainer.innerHTML += `
         <div class="row d-flex">
-                <div class="col">
-                    <img class="img-fluid" src="${product.imageUrl}" alt="Product Image" />
-                </div>
-                <div class="col">
-                    <h1>${product.name}</h1>
-                    <h3>${product.brand}</h3>
-                    <p class="fs-3 fw-light">${product.price} €</p>
-                    <p class="mt-5">${product.description}</p>
-                </div>
+            <div class="col">
+                <img class="img-fluid" src="${product.imageUrl}" alt="Product Image" />
             </div>
+            <div class="col">
+                <h1>${product.name}</h1>
+                <h3>${product.brand}</h3>
+                <p class="fs-3 fw-light">${product.price} €</p>
+                <p class="mt-5">${product.description}</p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <a href="index.html">
+                    <button class="btn btn-primary w-100">Torna alla pagina HOME</button>
+                </a>
+            </div>
+        </div>
         `
     } )
     .catch(err => console.log(err))

@@ -35,7 +35,7 @@ let createModifyEvent = function(){
 
     if(productId){
         document.getElementsByTagName('h1')[0]
-        .innerText = 'Modifica <AGGIUNGERE ID DEL PRODOTTO>';
+        .innerText = 'Modifica il prodotto';
 
         document.getElementById('save-product')
         .innerText = 'modifica prodotto';
@@ -66,21 +66,28 @@ let createModifyEvent = function(){
         .catch(err => console.log(err))
 
         deleteButton.addEventListener('click', () => {
-            fetch(URL + productId, { 
-                method: 'DELETE',
-                headers: {
-                    "Authorization": `Bearer ${KEY}`,
-                }
-            })
-            .then( res => {
-                if (res.ok) {
-                    alert('Prodotto eliminato con successo!');
-                    location.assign('index.html')
-                }else{
-                    throw new Error('Problema nell\'eliminazione del prodotto');
-                }
-            })
-            .catch(err => console.log(err))
+
+            let confirm = window.confirm('Confermi di voler cancellare il prodotto?');
+
+            if(confirm){
+                fetch(URL + productId, { 
+                    method: 'DELETE',
+                    headers: {
+                        "Authorization": `Bearer ${KEY}`,
+                    }
+                })
+                .then( res => {
+                    if (res.ok) {
+                        alert('Prodotto eliminato con successo!');
+                        location.assign('index.html')
+                    }else{
+                        throw new Error('Problema nell\'eliminazione del prodotto');
+                    }
+                })
+                .catch(err => console.log(err))
+            }else{
+                alert("Operazione annullata");
+            }
         })
 
         // inserire la fetch qui se non funziona
@@ -108,6 +115,19 @@ let createModifyEvent = function(){
         })
         .catch( err => console.log(err) )
     })
+
+    // Inserisco la conferma prima di resettare il form
+    let resetForm = document.getElementById('reset-form');
+
+    resetForm.onclick = function(){
+        let confirm = window.confirm("Sei sicuro di voler resettare tutti i campi del form?");
+
+        if(confirm){
+            productForm.reset();
+        }else{
+            alert('Operazione annullata');
+        }
+    }
 
 }
 
