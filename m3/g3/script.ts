@@ -38,7 +38,7 @@ class Freelancer extends FreelancesAbstract{
         return this.getTasseInps + this.tasseIrpef;
     }
 
-    get getTasseInps(): number {
+    get getTasseInps(): number {        
         return this.redditoAnnuoLordo * this.tasseInps;
     }
 
@@ -53,7 +53,7 @@ class Freelancer extends FreelancesAbstract{
 }
 
 
-let freelance = new Freelancer(30000);
+let freelance = new Freelancer(25000);
 console.log('Tasse INPS', freelance.getTasseInps);
 console.log('Tasse IRPEF', freelance.getTasseIrpef);
 console.log('Utile Tasse', freelance.getUtileTasse);
