@@ -44,17 +44,17 @@ class Capo{
 
 }
 
-let capiAbbigliamento:any[] = [];
+let capiAbbigliamento:Capo[] = [];
 
 fetch('../Abbigliamento.json')
-.then( res => {
+.then( (res:Response) => {
     if(res.ok){
         return res.json()
     }else{
         throw new Error('Errore nel recupero dei dati dalla fetch');
     }
 })
-.then( list => {
+.then( (list:Capo[]) => {
 
     list.forEach( (capo:Capo) => {
 
