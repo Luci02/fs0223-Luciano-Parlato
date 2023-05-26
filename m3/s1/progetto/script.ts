@@ -30,7 +30,6 @@ class RegistroChiamate{
 }
 
 class Smartphone implements ISmartphone{
-    private idChiamata: number = 0;
     carica: number;
     numeroChiamate: number;
     costoMinuto: number;
@@ -70,7 +69,7 @@ class Smartphone implements ISmartphone{
 
             // Aggiungo la chiamata al registro
             this.registroChiamate.push({
-                id: this.idChiamata++,
+                id: this.registroChiamate.length + 1,
                 durata: min,
                 dataOra: new Date()
             });
@@ -101,7 +100,6 @@ class Smartphone implements ISmartphone{
                 + ' che è durata '
                 + chiamata.durata 
                 + ' minuti.'
-                + `${chiamata.dataOra?.getHours()}`
             );
         });
 
@@ -109,21 +107,16 @@ class Smartphone implements ISmartphone{
 
     filtraChiamatePerDataOra( data?:Date, ora?:number ): void {
 
-        console.log(
-            this.registroChiamate.filter( ( element:RegistroChiamate ) => {
+        console.log('Chiamate effettuate:');
 
+            this.registroChiamate.forEach( ( element:RegistroChiamate ) => {
                 if( element.dataOra?.toLocaleDateString('it-IT') == data || element.dataOra?.getHours() === ora){
-                    return element;
+                    console.log(`${element.id} - Durata ${element.durata} minuti`);
                 }
-    
             } )
-        );
-        
-
     }
     
 }
-// Numero404 è da fare console.log()
 
 let firstUser = new Smartphone();
 let secondUser = new Smartphone();
@@ -142,7 +135,7 @@ console.log(firstUser.numero404());
 firstUser.azzeraChiamate();
 firstUser.getNumeroChiamate();
 firstUser.mostraRegistroChiamate();
-firstUser.filtraChiamatePerDataOra( new Date('26/05/2023'), 16);
+firstUser.filtraChiamatePerDataOra( new Date('26/05/2023'), 17);
 
 
 // Secondo utente
@@ -158,7 +151,7 @@ console.log(secondUser.numero404());
 secondUser.azzeraChiamate();
 secondUser.getNumeroChiamate();
 secondUser.mostraRegistroChiamate();
-secondUser.filtraChiamatePerDataOra( new Date('26/05/2023'), 16);
+secondUser.filtraChiamatePerDataOra( new Date('26/05/2023'), 17);
 
 // Terzo utente
 console.log(thirdUser.numero404());
@@ -173,4 +166,4 @@ console.log(thirdUser.numero404());
 thirdUser.azzeraChiamate();
 thirdUser.getNumeroChiamate();
 thirdUser.mostraRegistroChiamate();
-thirdUser.filtraChiamatePerDataOra( new Date('26/05/2023'), 16);
+thirdUser.filtraChiamatePerDataOra( new Date('26/05/2023'), 17);

@@ -3,12 +3,11 @@ class RegistroChiamate {
     constructor(obj) {
         this.id = obj.id;
         this.durata = obj.durata;
-        this.dataOra = obj.data;
+        this.dataOra = obj.dataOra;
     }
 }
 class Smartphone {
     constructor() {
-        this.idChiamata = 0;
         this.carica = 5;
         this.numeroChiamate = 0;
         this.costoMinuto = 0.20;
@@ -34,7 +33,7 @@ class Smartphone {
             console.log('il costo della chiamata è stato di ', (min * this.costoMinuto));
             // Aggiungo la chiamata al registro
             this.registroChiamate.push({
-                id: this.idChiamata++,
+                id: this.registroChiamate.length + 1,
                 durata: min,
                 dataOra: new Date()
             });
@@ -49,27 +48,26 @@ class Smartphone {
     mostraRegistroChiamate() {
         console.log(this.registroChiamate);
         this.registroChiamate.forEach((chiamata) => {
-            var _a, _b, _c;
+            var _a, _b;
             console.log('Hai effettuato una chiamata il giorno: '
                 + ((_a = chiamata.dataOra) === null || _a === void 0 ? void 0 : _a.toLocaleDateString('it-IT'))
                 + ' alle ore '
                 + ((_b = chiamata.dataOra) === null || _b === void 0 ? void 0 : _b.toLocaleTimeString('it-IT'))
                 + ' che è durata '
                 + chiamata.durata
-                + ' minuti.'
-                + `${(_c = chiamata.dataOra) === null || _c === void 0 ? void 0 : _c.getHours()}`);
+                + ' minuti.');
         });
     }
     filtraChiamatePerDataOra(data, ora) {
-        console.log(this.registroChiamate.filter((element) => {
+        console.log('Chiamate effettuate:');
+        this.registroChiamate.forEach((element) => {
             var _a, _b;
             if (((_a = element.dataOra) === null || _a === void 0 ? void 0 : _a.toLocaleDateString('it-IT')) == data || ((_b = element.dataOra) === null || _b === void 0 ? void 0 : _b.getHours()) === ora) {
-                return element;
+                console.log(`${element.id} - Durata ${element.durata} minuti`);
             }
-        }));
+        });
     }
 }
-// Numero404 è da fare console.log()
 let firstUser = new Smartphone();
 let secondUser = new Smartphone();
 let thirdUser = new Smartphone();
@@ -86,7 +84,7 @@ console.log(firstUser.numero404());
 firstUser.azzeraChiamate();
 firstUser.getNumeroChiamate();
 firstUser.mostraRegistroChiamate();
-firstUser.filtraChiamatePerDataOra(new Date('26/05/2023'), 16);
+firstUser.filtraChiamatePerDataOra(new Date('26/05/2023'), 17);
 // Secondo utente
 console.log(secondUser.numero404());
 secondUser.ricarica(5);
@@ -100,7 +98,7 @@ console.log(secondUser.numero404());
 secondUser.azzeraChiamate();
 secondUser.getNumeroChiamate();
 secondUser.mostraRegistroChiamate();
-secondUser.filtraChiamatePerDataOra(new Date('26/05/2023'), 16);
+secondUser.filtraChiamatePerDataOra(new Date('26/05/2023'), 17);
 // Terzo utente
 console.log(thirdUser.numero404());
 thirdUser.ricarica(5);
@@ -114,4 +112,4 @@ console.log(thirdUser.numero404());
 thirdUser.azzeraChiamate();
 thirdUser.getNumeroChiamate();
 thirdUser.mostraRegistroChiamate();
-thirdUser.filtraChiamatePerDataOra(new Date('26/05/2023'), 16);
+thirdUser.filtraChiamatePerDataOra(new Date('26/05/2023'), 17);
