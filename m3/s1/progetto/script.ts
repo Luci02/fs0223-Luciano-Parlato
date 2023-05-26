@@ -105,15 +105,12 @@ class Smartphone implements ISmartphone{
 
     }
 
-    filtraChiamatePerDataOra( data?:Date, ora?:number ): void {
-
-        console.log('Chiamate effettuate:');
-
-            this.registroChiamate.forEach( ( element:RegistroChiamate ) => {
-                if( element.dataOra?.toLocaleDateString('it-IT') == data || element.dataOra?.getHours() === ora){
-                    console.log(`${element.id} - Durata ${element.durata} minuti`);
-                }
-            } )
+    filtraChiamatePerDataOra( data?:Date ): RegistroChiamate[] {
+        return this.registroChiamate.filter( ( element:RegistroChiamate ) => {
+            if( element.dataOra?.toLocaleDateString('it-IT') == data?.toLocaleDateString('it-IT') ){
+                return element;
+            }
+        } )
     }
     
 }
@@ -135,7 +132,7 @@ console.log(firstUser.numero404());
 firstUser.azzeraChiamate();
 firstUser.getNumeroChiamate();
 firstUser.mostraRegistroChiamate();
-firstUser.filtraChiamatePerDataOra( new Date('26/05/2023'), 17);
+firstUser.filtraChiamatePerDataOra( new Date('2023-05-26'));
 
 
 // Secondo utente
@@ -151,7 +148,7 @@ console.log(secondUser.numero404());
 secondUser.azzeraChiamate();
 secondUser.getNumeroChiamate();
 secondUser.mostraRegistroChiamate();
-secondUser.filtraChiamatePerDataOra( new Date('26/05/2023'), 17);
+secondUser.filtraChiamatePerDataOra( new Date('2023-05-26'));
 
 // Terzo utente
 console.log(thirdUser.numero404());
@@ -166,4 +163,4 @@ console.log(thirdUser.numero404());
 thirdUser.azzeraChiamate();
 thirdUser.getNumeroChiamate();
 thirdUser.mostraRegistroChiamate();
-thirdUser.filtraChiamatePerDataOra( new Date('26/05/2023'), 17);
+console.log(thirdUser.filtraChiamatePerDataOra( new Date('2023-05-26')));

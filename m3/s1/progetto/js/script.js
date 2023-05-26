@@ -58,12 +58,11 @@ class Smartphone {
                 + ' minuti.');
         });
     }
-    filtraChiamatePerDataOra(data, ora) {
-        console.log('Chiamate effettuate:');
-        this.registroChiamate.forEach((element) => {
-            var _a, _b;
-            if (((_a = element.dataOra) === null || _a === void 0 ? void 0 : _a.toLocaleDateString('it-IT')) == data || ((_b = element.dataOra) === null || _b === void 0 ? void 0 : _b.getHours()) === ora) {
-                console.log(`${element.id} - Durata ${element.durata} minuti`);
+    filtraChiamatePerDataOra(data) {
+        return this.registroChiamate.filter((element) => {
+            var _a;
+            if (((_a = element.dataOra) === null || _a === void 0 ? void 0 : _a.toLocaleDateString('it-IT')) == (data === null || data === void 0 ? void 0 : data.toLocaleDateString('it-IT'))) {
+                return element;
             }
         });
     }
@@ -84,7 +83,7 @@ console.log(firstUser.numero404());
 firstUser.azzeraChiamate();
 firstUser.getNumeroChiamate();
 firstUser.mostraRegistroChiamate();
-firstUser.filtraChiamatePerDataOra(new Date('26/05/2023'), 17);
+firstUser.filtraChiamatePerDataOra(new Date('2023-05-26'));
 // Secondo utente
 console.log(secondUser.numero404());
 secondUser.ricarica(5);
@@ -98,7 +97,7 @@ console.log(secondUser.numero404());
 secondUser.azzeraChiamate();
 secondUser.getNumeroChiamate();
 secondUser.mostraRegistroChiamate();
-secondUser.filtraChiamatePerDataOra(new Date('26/05/2023'), 17);
+secondUser.filtraChiamatePerDataOra(new Date('2023-05-26'));
 // Terzo utente
 console.log(thirdUser.numero404());
 thirdUser.ricarica(5);
@@ -112,4 +111,4 @@ console.log(thirdUser.numero404());
 thirdUser.azzeraChiamate();
 thirdUser.getNumeroChiamate();
 thirdUser.mostraRegistroChiamate();
-thirdUser.filtraChiamatePerDataOra(new Date('26/05/2023'), 17);
+console.log(thirdUser.filtraChiamatePerDataOra(new Date('2023-05-26')));
