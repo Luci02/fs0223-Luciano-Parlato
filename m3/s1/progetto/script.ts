@@ -134,7 +134,6 @@ firstUser.getNumeroChiamate();
 firstUser.mostraRegistroChiamate();
 console.log(firstUser.filtraChiamatePerDataOra(new Date('2023-05-26')));
 
-
 // Secondo utente
 console.log(secondUser.numero404());
 secondUser.ricarica(5);
