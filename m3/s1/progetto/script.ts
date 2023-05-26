@@ -93,12 +93,12 @@ class Smartphone implements ISmartphone{
         this.registroChiamate.forEach( (chiamata:RegistroChiamate) => {
 
             console.log(
-                'Hai effettuato una chiamata il giorno: ' 
+                'Hai effettuato una chiamata il giorno: '
                 + chiamata.dataOra?.toLocaleDateString('it-IT')
                 + ' alle ore '
                 + chiamata.dataOra?.toLocaleTimeString('it-IT')
                 + ' che è durata '
-                + chiamata.durata 
+                + chiamata.durata
                 + ' minuti.'
             );
         });
