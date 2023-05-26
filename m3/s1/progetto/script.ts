@@ -18,10 +18,14 @@ class RegistroChiamate{
     durata?: number;
     dataOra?: Date;
 
-    constructor(obj:any){
+    constructor(obj:{
+        id:number;
+        durata:number;
+        dataOra:Date;
+    }){
         this.id = obj.id;
         this.durata = obj.durata;
-        this.dataOra = obj.data;
+        this.dataOra = obj.dataOra;
     }
 }
 
