@@ -132,7 +132,7 @@ console.log(firstUser.numero404());
 firstUser.azzeraChiamate();
 firstUser.getNumeroChiamate();
 firstUser.mostraRegistroChiamate();
-firstUser.filtraChiamatePerDataOra( new Date('2023-05-26'));
+console.log(firstUser.filtraChiamatePerDataOra(new Date('2023-05-26')));
 
 
 // Secondo utente
@@ -148,7 +148,7 @@ console.log(secondUser.numero404());
 secondUser.azzeraChiamate();
 secondUser.getNumeroChiamate();
 secondUser.mostraRegistroChiamate();
-secondUser.filtraChiamatePerDataOra( new Date('2023-05-26'));
+console.log(secondUser.filtraChiamatePerDataOra(new Date('2023-05-26')));
 
 // Terzo utente
 console.log(thirdUser.numero404());
@@ -163,4 +163,4 @@ console.log(thirdUser.numero404());
 thirdUser.azzeraChiamate();
 thirdUser.getNumeroChiamate();
 thirdUser.mostraRegistroChiamate();
-console.log(thirdUser.filtraChiamatePerDataOra( new Date('2023-05-26')));
+console.log(thirdUser.filtraChiamatePerDataOra(new Date('2023-05-26')));
