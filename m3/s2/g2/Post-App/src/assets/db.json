@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Titolo Post 1",
+    "body": "Lorem ipsum dolor sit amet, consectetur adip",
+    "active": true
+  },
+  {
+    "id": 2,
+    "title": "Titolo Post 2",
+    "body": "Lorem ipsum dolor sit amet, consectetur adip",
+    "active": true
+  },
+  {
+    "id": 3,
+    "title": "Titolo Post 3",
+    "body": "Lorem ipsum dolor sit amet, consectetur adip",
+    "active": true
+  },
+  {
+    "id": 4,
+    "title": "Titolo Post 4",
+    "body": "Lorem ipsum dolor sit amet, consectetur adip",
+    "active": false
+  },
+  {
+    "id": 5,
+    "title": "Titolo Post 5",
+    "body": "Lorem ipsum dolor sit amet, consectetur adip",
+    "active": false
+  }
+]
