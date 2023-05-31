@@ -19,13 +19,13 @@ export class ActivePostsComponent {
 
     switch (true) {
       case type === "news":
-        return 'bg-primary';
+        return 'bg-warning';
       case type === "politics":
         return 'bg-black';
       case type === "education":
-        return 'bg-danger';
+        return 'bg-primary';
       default:
-        return 'bg-warning';
+        return '';
     }
 
   }
