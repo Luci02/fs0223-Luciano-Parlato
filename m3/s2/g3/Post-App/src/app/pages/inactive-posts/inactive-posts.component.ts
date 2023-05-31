@@ -12,9 +12,22 @@ export class InactivePostsComponent {
   postArray: Post[] = [];
 
   constructor(private postSvc: PostService){
-    this.postSvc.getPosts().then( post => {
-      this.postArray = post.filter( p => !p.active )
+    this.postArray = this.postSvc.getPosts(false)
+  }
+
+  coloraCard( type: string ): string{
+
+    switch (true) {
+      case type === "news":
+        return 'bg-primary';
+      case type === "politics":
+        return 'bg-black';
+      case type === "education":
+        return 'bg-danger';
+      default:
+        return 'bg-warning';
     }
-  )}
+
+  }
 
 }
