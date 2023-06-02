@@ -1,0 +1,98 @@
+header{
+
+  .navbar-container{
+
+    padding: 1.5em 0;
+
+    ul{
+
+      font: {
+        size: 1.8em;
+        weight: bold;
+      }
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3em;
+
+      li{
+
+        transition: all 0.5s;
+
+        &:hover{
+          transform: scale(1.1);
+        }
+
+        a {
+          background-image: linear-gradient(
+            to right,
+            #54b3d6,
+            #54b3d6 50%,
+            #000000 50%
+          );
+          background-size: 200% 100%;
+          background-position: -100%;
+          background-clip: text;
+          -webkit-background-clip: text;
+          display: inline-block;
+          padding: 5px 0;
+          position: relative;
+          -webkit-text-fill-color: transparent;
+          transition: all 0.3s ease-in-out;
+        }
+
+        a:before {
+          content: '';
+          background: #54b3d6;
+          display: block;
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          width: 0;
+          height: 3px;
+          transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+         background-position: 0;
+        }
+
+        a:hover::before {
+          width:100%;
+        }
+
+        .active{
+          background-image: linear-gradient(
+            to right,
+            #54b3d6,
+            #54b3d6 50%,
+            #000000 50%
+          );
+          background-size: 200% 100%;
+          background-position: 0;
+          background-clip: text;
+          -webkit-background-clip: text;
+          display: inline-block;
+          padding: 5px 0;
+          position: relative;
+          -webkit-text-fill-color: transparent;
+          transition: all 0.3s ease-in-out;
+
+          &::before{
+            content: '';
+            background: #54b3d6;
+            display: block;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+
+      }
+    }
+  }
+}

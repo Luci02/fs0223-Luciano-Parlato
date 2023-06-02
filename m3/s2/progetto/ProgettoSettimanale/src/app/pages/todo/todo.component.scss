@@ -1,0 +1,56 @@
+.main-content{
+
+  .loading, .label-without-tasks{
+    text-align: center;
+    margin-top: 35vh;
+  }
+
+  .label-without-tasks{
+    margin-bottom: 1em;
+  }
+
+  .task-contenitor{
+    width: fit-content;
+    margin: .5em auto;
+
+    .checkbox{
+      font-weight: bold;
+      background-color: rgb(0, 255, 0);
+      border: 1px solid green;
+      border-radius: 20%;
+      padding: 0 .2em;
+      &:hover{
+        cursor: pointer;
+      }
+      &:active{
+        background-color: green;
+        border: 1px solid rgb(0, 255, 0);
+        color: white;
+      }
+    }
+  }
+
+  form{
+
+    text-align: center;
+
+    input, button{
+      border-radius: 5px;
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    input{
+      padding: .2em;
+      padding-left: .3em;
+    }
+
+    button{
+      margin-left: .1em;
+      padding: .2em .4em;
+      cursor: pointer;
+    }
+  }
+
+
+}

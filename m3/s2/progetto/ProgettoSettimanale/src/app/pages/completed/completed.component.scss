@@ -1,0 +1,41 @@
+.main-content{
+
+  .label-without-tasks, .loading{
+    margin-bottom: 1em;
+    text-align: center;
+    margin-top: 35vh;
+  }
+
+  form{
+
+    text-align: center;
+
+    input, button{
+      border-radius: 5px;
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    input{
+      padding: .2em;
+      padding-left: .3em;
+    }
+
+    button{
+      margin-left: .1em;
+      padding: .2em .4em;
+      cursor: pointer;
+    }
+  }
+
+  .taskList{
+
+    .task-contenitor{
+      margin-top: 500px;
+      width: max-content;
+      margin: 0 auto;
+    }
+
+  }
+
+}

@@ -1,0 +1,22 @@
+<div class="main-content">
+
+  <div *ngIf="loading" class="loading">Loading...</div>
+  <div *ngIf="toDoList.length == 0 && !loading">
+    <p class="label-without-tasks">Oops, non ci sono task</p>
+  </div>
+
+  <div *ngIf="toDoList.length != 0 && !loading" class="taskList">
+      <div class="task-contenitor">
+        <p *ngFor="let task of toDoList">
+          - {{task.title}}
+        </p>
+      </div>
+  </div>
+
+  <div *ngIf="!loading && toDoList.length == 0">
+    <form>
+      <input type="text" name="title" [(ngModel)]="newToDo.title" >
+      <button (click)="createNewToDo();">+</button>
+    </form>
+  </div>
+</div>
