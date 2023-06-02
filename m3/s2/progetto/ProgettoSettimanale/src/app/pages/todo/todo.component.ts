@@ -41,7 +41,7 @@ export class TodoComponent implements OnInit {
   }
 
   completeTask(todo: ITodo): void{
-    this.ToDoSvc.ToDoCompleted(todo).then( res => {
+    this.ToDoSvc.ToDoCompleted(todo).then( () => {
       this.getToDoList();
     });
   }
