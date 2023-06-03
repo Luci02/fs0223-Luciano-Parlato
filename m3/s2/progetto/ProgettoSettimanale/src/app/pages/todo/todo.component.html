@@ -8,15 +8,17 @@
   <div *ngIf="toDoList.length != 0 && !loading" class="taskList">
       <div class="task-contenitor">
         <p *ngFor="let task of toDoList">
-          - {{task.title}} <button class="checkbox" (click)="completeTask(task);">&check;</button>
+          - {{task.title}}
+          <img src="assets/edit.svg" alt="checkbox" title="Edit task" class="btn-edit" [routerLink]="['/edit',task.id]">
+          <img src="assets/check-box.svg" alt="checkbox" title="Complete the task" class="btn-checkbox" (click)="completeTask(task)">
         </p>
       </div>
   </div>
 
   <div *ngIf="!loading">
     <form>
-      <input type="text" name="title" [(ngModel)]="newToDo.title" >
-      <button (click)="createNewToDo();">+</button>
+      <input type="text" name="title" [(ngModel)]="newToDo.title" (keyup.enter)="add()" />
+      <img src="assets/add.svg" alt="Add button" title="Add new task" class="btn-add" (click)="add()">
     </form>
   </div>
 </div>

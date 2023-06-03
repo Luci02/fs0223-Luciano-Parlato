@@ -1,0 +1,9 @@
+<div *ngIf="loading" class="loading">Loading...</div>
+
+<div *ngIf="!loading">
+  <h2>Modifica la task</h2>
+  <form>
+    <input type="text" name="title" [(ngModel)]="editedToDo.title" (keyup.enter)="edit()" />
+    <img src="assets/add.svg" alt="Add button" title="Add new task" class="btn-add" (click)="edit()">
+  </form>
+</div>

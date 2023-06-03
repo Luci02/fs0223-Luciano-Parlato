@@ -13,44 +13,81 @@
     width: fit-content;
     margin: .5em auto;
 
-    .checkbox{
-      font-weight: bold;
-      background-color: rgb(0, 255, 0);
-      border: 1px solid green;
-      border-radius: 20%;
-      padding: 0 .2em;
-      &:hover{
+    p{
+      display: flex;
+      align-items: center;
+      margin-bottom: .5em;
+
+      .btn-checkbox, .btn-edit{
         cursor: pointer;
+        margin-left: .4em;
+        height: 25px;
       }
-      &:active{
-        background-color: green;
-        border: 1px solid rgb(0, 255, 0);
-        color: white;
+
+      .btn-edit{
+
+        &:hover{
+          animation: edit .4s linear 1;
+        }
+
       }
+
+      img.btn-checkbox{
+        filter: invert(41%) sepia(28%) saturate(5471%) hue-rotate(93deg) brightness(94%) contrast(108%);
+      }
+
     }
+
   }
 
   form{
 
-    text-align: center;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
 
     input, button{
+      border: 1px solid;
       border-radius: 5px;
-      border-style: solid;
-      border-width: 1px;
     }
 
     input{
       padding: .2em;
       padding-left: .3em;
+      transition: box-shadow 500ms;
+
+      &:focus{
+        outline: 1px solid #880ED4;
+        box-shadow: 0px 0px 15px 1px rgba(136,14,212,0.5);
+      }
+
     }
 
-    button{
-      margin-left: .1em;
-      padding: .2em .4em;
+    .btn-add{
+      height: 30px;
       cursor: pointer;
+      filter: invert(24%) sepia(97%) saturate(7475%) hue-rotate(277deg) brightness(84%) contrast(105%);
+      transition: all 500ms ease;
+
+      &:hover{
+        filter: invert(13%) sepia(37%) saturate(6714%) hue-rotate(271deg) brightness(84%) contrast(112%);
+        transform: scale(1.2);
+      }
+
     }
   }
 
 
+}
+
+@keyframes edit {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(2);
+  }
+  100%{
+    transform: scale(1);
+  }
 }

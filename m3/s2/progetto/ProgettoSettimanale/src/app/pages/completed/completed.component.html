@@ -9,14 +9,7 @@
       <div class="task-contenitor">
         <p *ngFor="let task of toDoList">
           - {{task.title}}
+          <img src="assets/delete.svg" alt="Delete" title="Delete this task" class="btn-delete" (click)="delete(task)">
         </p>
       </div>
   </div>
-
-  <div *ngIf="!loading && toDoList.length == 0">
-    <form>
-      <input type="text" name="title" [(ngModel)]="newToDo.title" >
-      <button (click)="createNewToDo();">+</button>
-    </form>
-  </div>
-</div>

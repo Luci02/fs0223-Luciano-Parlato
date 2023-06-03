@@ -22,13 +22,12 @@ export class CompletedComponent implements OnInit {
 
   getCompletedTasks(){
     this.completedTodoSvc.getToDoList().then( response => {
-      this.toDoList = response;
       this.loading = false;
       this.toDoList = response.filter( element => element.completed === true );
     } )
   }
 
-  createNewToDo(): void{
+  add(): void{
     if(this.newToDo.title != ''){
       this.completedTodoSvc.addNewToDo(this.newToDo).then( () => this.getCompletedTasks());
       this.newToDo.title = "";
@@ -38,6 +37,10 @@ export class CompletedComponent implements OnInit {
         this.newToDo.title = '';
       }, 1000);
     }
+  }
+
+  delete(task: ITodo): void{
+    this.completedTodoSvc.deleteToDo(task).then( () => { this.getCompletedTasks() });
   }
 
 }

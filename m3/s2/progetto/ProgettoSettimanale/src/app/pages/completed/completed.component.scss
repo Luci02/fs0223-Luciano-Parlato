@@ -6,36 +6,60 @@
     margin-top: 35vh;
   }
 
-  form{
-
-    text-align: center;
-
-    input, button{
-      border-radius: 5px;
-      border-style: solid;
-      border-width: 1px;
-    }
-
-    input{
-      padding: .2em;
-      padding-left: .3em;
-    }
-
-    button{
-      margin-left: .1em;
-      padding: .2em .4em;
-      cursor: pointer;
-    }
-  }
-
   .taskList{
 
     .task-contenitor{
       margin-top: 500px;
       width: max-content;
       margin: 0 auto;
+
+      p{
+        display: flex;
+        align-items: center;
+        margin-bottom: .5em;
+
+        .btn-delete{
+          height: 30px;
+          cursor: pointer;
+          margin-left: .4em;
+          filter: invert(10%) sepia(97%) saturate(5611%) hue-rotate(4deg) brightness(93%) contrast(115%);
+
+          &:hover{
+            animation: wiggle 2s linear 1;
+          }
+        }
+
+
+      }
+
     }
+
 
   }
 
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
 }

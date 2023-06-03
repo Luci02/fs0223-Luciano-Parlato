@@ -1,0 +1,47 @@
+.loading{
+  text-align: center;
+  margin-top: 35vh;
+}
+
+h2{
+  text-align: center;
+  margin-top: 5em;
+  margin-bottom: 1em;
+}
+
+form{
+
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+
+  input, button{
+    border: 1px solid;
+    border-radius: 5px;
+  }
+
+  input{
+    padding: .2em;
+    padding-left: .3em;
+    transition: box-shadow 500ms;
+
+    &:focus{
+      outline: 1px solid #880ED4;
+      box-shadow: 0px 0px 15px 1px rgba(136,14,212,0.5);
+    }
+
+  }
+
+  .btn-add{
+    height: 30px;
+    cursor: pointer;
+    filter: invert(24%) sepia(97%) saturate(7475%) hue-rotate(277deg) brightness(84%) contrast(105%);
+    transition: all 500ms ease;
+
+    &:hover{
+      filter: invert(13%) sepia(37%) saturate(6714%) hue-rotate(271deg) brightness(84%) contrast(112%);
+      transform: scale(1.2);
+    }
+
+  }
+}

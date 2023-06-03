@@ -22,13 +22,12 @@ export class TodoComponent implements OnInit {
 
   getToDoList(): void {
     this.ToDoSvc.getToDoList().then( response => {
-      this.toDoList = response;
-      this.loading = false;
       this.toDoList = response.filter( element => element.completed === false );
+      this.loading = false;
     } )
   }
 
-  createNewToDo(): void{
+  add(): void{
     if(this.newToDo.title != ''){
       this.ToDoSvc.addNewToDo(this.newToDo).then( () => this.getToDoList());
       this.newToDo.title = "";
@@ -41,7 +40,8 @@ export class TodoComponent implements OnInit {
   }
 
   completeTask(todo: ITodo): void{
-    this.ToDoSvc.ToDoCompleted(todo).then( () => {
+    todo.completed = true;
+    this.ToDoSvc.updateToDo(todo).then( () => {
       this.getToDoList();
     });
   }

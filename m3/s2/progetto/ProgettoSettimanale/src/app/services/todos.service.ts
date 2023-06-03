@@ -6,7 +6,7 @@ import { ITodo } from '../Models/Itodo';
 })
 export class TodosService {
 
-  apiUrl: string = 'http://localhost:3000/todos'
+  apiUrl: string = 'http://localhost:3000/todos';
 
   constructor() { }
 
@@ -14,8 +14,11 @@ export class TodosService {
     return fetch(this.apiUrl).then(response => response.json());
   }
 
-  ToDoCompleted(todo: ITodo): Promise<Response>{
-    todo.completed = true;
+  getSingleToDo(id: number): Promise<ITodo>{
+    return fetch(this.apiUrl+'/'+id).then(response => response.json());
+  }
+
+  updateToDo(todo: ITodo): Promise<Response>{
     return fetch(this.apiUrl+'/'+todo.id, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
@@ -23,12 +26,18 @@ export class TodosService {
     })
   }
 
-  addNewToDo(todo: ITodo) {
+  addNewToDo(todo: ITodo): Promise<ITodo> {
     return fetch(this.apiUrl,{
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(todo)
-    }).then( res => res.json());
+    }).then( res => res.json() );
 }
+
+  deleteToDo(task: ITodo){
+    return fetch(this.apiUrl+'/'+task.id, {
+      method: 'DELETE'
+    }).then( res => res.json() );
+  }
 
 }
