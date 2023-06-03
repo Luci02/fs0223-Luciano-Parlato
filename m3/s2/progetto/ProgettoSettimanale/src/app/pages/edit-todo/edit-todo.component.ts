@@ -32,9 +32,8 @@ export class EditTodoComponent implements OnInit {
   }
 
   edit(): void{
-    this.taskSvc.updateToDo(this.editedToDo).then( () => {
-      this.router.navigate(['/home']);
-    })
+    this.taskSvc.updateToDo(this.editedToDo)
+    this.router.navigate(['/home']);
   }
 
 }

@@ -1,23 +1,23 @@
 {
   "todos": [
     {
-      "title": "prima tas",
+      "title": "prima task modificata",
       "completed": false,
       "id": 1
     },
     {
-      "title": "hw4h4ww4h",
+      "title": "Aggiunta possibilità di modificare le task",
       "completed": false,
       "id": 2
     },
     {
-      "title": "whwahww4h",
+      "title": "Aggiunte piccole \"animazioni\"",
       "completed": false,
       "id": 3
     },
     {
-      "title": "wahawhwa4h",
-      "completed": false,
+      "title": "Aggiunta possibilità di cancellare le task",
+      "completed": true,
       "id": 4
     }
   ]
