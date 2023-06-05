@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      Totale Foto favorite: {{likedPhoto.length}}
+    </div>
+  </div>
+  <div class="row row-cols-4">
+    <div class="card mx-2 mb-3" *ngFor="let photo of photosArray">
+      <img [src]="photo.url" class="card-img-top img-fluid" alt="Image">
+      <div class="card-body">
+        <h5 class="card-title">{{photo.title}}</h5>
+        <div class="d-flex justify-content-between mx-5">
+          <a class="btn btn-danger" (click)="deletePhoto(photo)">Elimina</a>
+          <a class="btn btn-success" (click)="addLike(photo.id)">Mi Piace</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
