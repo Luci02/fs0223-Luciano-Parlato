@@ -9,17 +9,15 @@ import { DrivenFormClass } from 'src/app/Models/driven-form-class';
 })
 export class TemplateDrivenFormComponent {
 
-  @ViewChild('homeForm') homeForm!: NgForm;
-
   datiForm: DrivenFormClass = new DrivenFormClass('','','','','','');
 
   constructor(){}
 
-  onSubmit(): void {
+  onSubmit(form: NgForm): void {
 
-    console.log(this.homeForm);
+    console.log(form);
 
-    this.datiForm = this.homeForm.value;
+    this.datiForm = form.value;
 
     console.log(this.datiForm);
 
