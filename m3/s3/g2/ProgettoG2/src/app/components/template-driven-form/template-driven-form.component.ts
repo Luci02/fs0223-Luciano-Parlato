@@ -10,6 +10,7 @@ import { DrivenFormClass } from 'src/app/Models/driven-form-class';
 export class TemplateDrivenFormComponent {
 
   datiForm: DrivenFormClass = new DrivenFormClass('','','','','','');
+  powerArray: string[] = ['', 'Panino con la nutella', 'Chat GPT'];
 
   constructor(){}
 
@@ -20,6 +21,7 @@ export class TemplateDrivenFormComponent {
     this.datiForm = form.value;
 
     console.log(this.datiForm);
+
 
   }
 

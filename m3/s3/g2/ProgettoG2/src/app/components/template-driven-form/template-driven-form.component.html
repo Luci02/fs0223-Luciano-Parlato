@@ -1,24 +1,31 @@
 <div class="container">
 
-  <h2>TD from hero</h2>
+  <h2>Template Driven form hero</h2>
 
   <form #homeForm="ngForm" (ngSubmit)="onSubmit(homeForm)">
     <div class="mb-3">
       <label for="nome" class="form-label">Nome</label>
       <input id="nome" name="nome" type="text" class="form-control" ngModel required>
+      <div class="alert alert-danger mt-2" role="alert" *ngIf="homeForm.controls['nome'].invalid && !homeForm.controls['nome'].untouched">
+        Campo Obbligatorio
+      </div>
     </div>
     <div class="mb-3">
       <label for="alter-ego" class="form-label">Alter Ego</label>
       <input id="alter-ego" name="alterEgo" type="text" class="form-control" ngModel required>
+      <div class="alert alert-danger mt-2" role="alert" *ngIf="homeForm.controls['alterEgo'].invalid && !homeForm.controls['nome'].untouched">
+        Campo Obbligatorio
+      </div>
     </div>
     <div class="mb-3">
       <label for="power" class="form-label">Super Potere</label>
       <div>
         <select id="power" name="power" class="form-select" ngModel required>
-          <option value="" selected></option>
-          <option value="1">First Title</option>
-          <option value="2">Second Title</option>
+          <option *ngFor="let power of powerArray" [value]="power">{{power}}</option>
         </select>
+      </div>
+      <div class="alert alert-danger mt-2" role="alert" *ngIf="homeForm.controls['power'].invalid && !homeForm.controls['nome'].untouched">
+        Campo Obbligatorio
       </div>
     </div>
     <div class="mb-3">
