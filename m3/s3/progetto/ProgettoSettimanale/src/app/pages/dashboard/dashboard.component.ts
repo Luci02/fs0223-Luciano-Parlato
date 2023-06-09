@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit {
     this.userSvc.delete(item.id).subscribe(
       () => {
         alert('Elemento eliminato con successo.');
+        this.userSvc.get().subscribe(current => this.usersArray = current )
       },
       error => {
         console.error('Si è verificato un errore durante l\'eliminazione:', error);
