@@ -20,6 +20,34 @@
       "name": "Charde Foley",
       "surname": "Potter",
       "id": 3
+    },
+    {
+      "email": "nigoko@mailinator.com",
+      "password": "$2a$10$fYI5ExXLD.v1DPQWGX0nK.GtdYK0YwUET/CucbIayFDkBtFi/Fgc6",
+      "name": "Octavius Finley",
+      "surname": "Ellison",
+      "id": 4
+    },
+    {
+      "email": "pacavy@mailinator.com",
+      "password": "$2a$10$Gv6LfXykmUeZB.30nuPJCuHLehj7gMWBtHvMQbExl37Oj0E99w2t.",
+      "name": "Rose Frye",
+      "surname": "Walter",
+      "id": 5
+    },
+    {
+      "email": "nyzynaqapa@mailinator.com",
+      "password": "$2a$10$qBO/KSqYDm.UQZS.way9ke7boGrY0FvvPNUjl2cZ8JUZKB6MobOs.",
+      "name": "Brennan Hendricks",
+      "surname": "Decker",
+      "id": 6
+    },
+    {
+      "email": "sowicimixi@mailinator.com",
+      "password": "$2a$10$4.yY2KLfIOvEIgkeSLbyyOA4s18i.kFrbrwbtnv8fiWzBLq.dFpBO",
+      "name": "Wendy Nolan",
+      "surname": "Sampson",
+      "id": 7
     }
   ]
 }

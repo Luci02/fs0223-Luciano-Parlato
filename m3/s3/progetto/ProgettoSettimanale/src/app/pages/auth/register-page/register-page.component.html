@@ -1,27 +1,31 @@
-<form class="w-25 m-auto mt-4">
-  <h1 class="text-center mb-3">Please Register</h1>
+<div class="w-100 main-content">
+  <div class="generic-container d-flex">
+    <form class="w-25 m-auto">
+      <h1 class="text-center mb-3 text-light mb-5">Please Register</h1>
 
-  <input
-  type="text" placeholder="Name"
-  name="name" [(ngModel)]="data.name"
-  class="form-control mb-2">
-  <input
-  type="text" placeholder="Surname"
-  name="surname" [(ngModel)]="data.surname"
-  class="form-control mb-2">
-  <input
-  type="email" placeholder="E-mail"
-  name="email" [(ngModel)]="data.email"
-  class="form-control mb-2">
-  <input
-  type="password" placeholder="Password"
-  name="password" [(ngModel)]="data.password"
-  class="form-control mb-2">
+      <input
+      type="text" placeholder="Name"
+      name="name" [(ngModel)]="data.name"
+      class="form-control mb-2">
+      <input
+      type="text" placeholder="Surname"
+      name="surname" [(ngModel)]="data.surname"
+      class="form-control mb-2">
+      <input
+      type="email" placeholder="E-mail"
+      name="email" [(ngModel)]="data.email"
+      class="form-control mb-2">
+      <input
+      type="password" placeholder="Password"
+      name="password" [(ngModel)]="data.password"
+      class="form-control mb-2">
 
-  <div class="d-flex align-items-center justify-content-between">
-    <button class="btn btn-primary" (click)="register()">Sign In</button>
-      <a class="link" [routerLink]="['/']">Torna alla home</a>
+      <div class="d-flex align-items-center justify-content-between">
+        <button class="btn btn-primary" (click)="register()">Sign In</button>
+          <a class="link" [routerLink]="['/']">Torna alla home</a>
+      </div>
+
+    </form>
   </div>
-
-</form>
+</div>
 
