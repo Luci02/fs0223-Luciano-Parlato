@@ -2,28 +2,7 @@
   <div class="generic-container">
     <h1 class="text-center text-light py-5">Dashboard</h1>
 
-    <table class="table table-striped w-75 mx-auto">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Name</th>
-          <th scope="col">Surname</th>
-          <th scope="col">E-Mail</th>
-          <th scope="col" class="text-center">Actions</th>
-        </tr>
-      </thead>
-      <tbody class="table-group-divider">
-        <tr *ngFor="let item of usersArray">
-          <th scope="row">{{item.id}}</th>
-          <td>{{item.name}}</td>
-          <td>{{item.surname}}</td>
-          <td>{{item.email}}</td>
-          <td class="text-center">
-              <a class="btn btn-primary me-1" (click)="OnChange(item.email)">Modifica</a>
-              <a class="btn btn-danger ms-1" (click)="OnDelete(item)">Delete</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <app-table></app-table>
+
   </div>
 </div>

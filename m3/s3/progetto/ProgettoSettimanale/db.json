@@ -15,8 +15,8 @@
       "id": 2
     },
     {
-      "email": "zulyda@mailinator.com",
-      "password": "$2a$10$HPY04xwurPD0ETzASn6YeuOubjcFHo/wouCkrf0DTK92LkVzZrG0u",
+      "email": "qoeiughqi8@aeijgb.com",
+      "password": "$2a$10$AvqhzpeQfkUEKYfcJIFTceDP9U7H9M3EAnLRv439Cuo3iYALh6byO",
       "name": "Janna Randolph",
       "surname": "Barry",
       "id": 3
@@ -27,6 +27,20 @@
       "name": "Beau Morris",
       "surname": "Howard",
       "id": 4
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Janna",
+      "surname": "Elliott",
+      "address": {
+        "street": "Via Europa",
+        "civic": 117,
+        "city": "Rozzano",
+        "cap": "20089"
+      },
+      "class": "1H"
     }
   ]
 }

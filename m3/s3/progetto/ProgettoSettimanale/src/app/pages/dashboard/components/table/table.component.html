@@ -1,0 +1,34 @@
+<div class="container text-end mb-3">
+  <button class="btn btn-primary">Aggiungi un nuovo studente</button>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Surname</th>
+      <th scope="col">Address</th>
+      <th scope="col">Class</th>
+      <th scope="col" class="text-center">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let student of studentsArray">
+      <th scope="row" class="align-middle">{{student.id}}</th>
+      <td class="align-middle">{{student.name}}</td>
+      <td class="align-middle">{{student.surname}}</td>
+      <td class="align-middle">
+        {{student.address.street}}
+        {{student.address.civic + ','}}
+        {{student.address.city}}
+        {{student.address.cap}}
+      </td>
+      <td class="align-middle">{{student.class}}</td>
+      <td class="text-center align-middle">
+          <a class="btn btn-primary me-1" (click)="OnChangeClass(student.class)">Modifica Classe</a>
+          <a class="btn btn-danger ms-1" (click)="OnDelete(student)">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

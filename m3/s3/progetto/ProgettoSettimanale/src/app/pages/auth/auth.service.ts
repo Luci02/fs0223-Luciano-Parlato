@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { BehaviorSubject, map, tap } from 'rxjs';
+import { BehaviorSubject, catchError, map, tap, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 import { IAccessData } from './interfaces/I-access-data';
 import { HttpClient } from '@angular/common/http';
@@ -41,8 +41,9 @@ export class AuthService {
 
       const expDate = this.jwtHelper
       .getTokenExpirationDate(data.accessToken) as Date;
+      this.autoLogout(expDate);
     }),
-      //catchError()
+      catchError(this.errors)
     )
   }
 
@@ -51,7 +52,7 @@ export class AuthService {
     if(!userJson){
       return
     }
-    const user:IAccessData = JSON.parse(userJson)
+    const user: IAccessData = JSON.parse(userJson)
     if(this.jwtHelper.isTokenExpired(user.accessToken)){
       return;
     }
@@ -61,10 +62,11 @@ export class AuthService {
   }
 
   signUp(data:IRegisterData){
-    return this.http.post<IAccessData>(this.apiUrl + '/register', data);
+    return this.http.post<IAccessData>(this.apiUrl + '/register', data)
+    .pipe(catchError(this.errors));
   }
 
-  logout(){
+  logout(): void {
     this.authSubject.next(null);
     localStorage.removeItem('user');
     this.router.navigate(['/login']);
@@ -73,10 +75,16 @@ export class AuthService {
     }
   }
 
-  autoLogout(expDate:Date){
+  autoLogout(expDate:Date): void {
     const expMs = expDate.getTime() - new Date().getTime();
     this.authLogoutTimer = setTimeout(()=>{
       this.logout();
     }, expMs)
   }
+
+  errors(err: any){
+    console.log(err.error);
+    return throwError(err.error);
+  }
+
 }

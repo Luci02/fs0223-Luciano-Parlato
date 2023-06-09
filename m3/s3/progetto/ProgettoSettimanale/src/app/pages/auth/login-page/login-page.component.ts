@@ -24,9 +24,8 @@ export class LoginPageComponent {
   login(){
     this.authSvc.login(this.data)
     .subscribe(accessData => {
-      alert(`Sei loggato come ${accessData.user.name}`)
+      this.router.navigate(['/dashboard'])
     })
-    this.router.navigate(['/dashboard'])
   }
 
 }
