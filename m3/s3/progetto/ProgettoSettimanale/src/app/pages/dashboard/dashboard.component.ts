@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
     this.userSvc.get().subscribe(current => this.usersArray = current )
   }
 
-  OnClickDelete(item: IUser){
+  OnDelete(item: IUser){
     this.userSvc.delete(item.id).subscribe(
       () => {
         alert('Elemento eliminato con successo.');
@@ -29,5 +29,24 @@ export class DashboardComponent implements OnInit {
       }
     );
   }
+
+  OnChange(email: string): void {
+    const newEmail = prompt('Enter the new email:');
+    if (newEmail) {
+      const userToUpdate = this.usersArray.find(u => u.email === email);
+      if (userToUpdate) {
+        userToUpdate.email = newEmail;
+        this.userSvc.put(userToUpdate).subscribe(
+          response => {
+            console.log(response);
+          },
+          error => {
+            console.log(error);
+          }
+        );
+      }
+    }
+  }
+
 
 }

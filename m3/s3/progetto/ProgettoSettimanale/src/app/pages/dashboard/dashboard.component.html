@@ -4,11 +4,11 @@
     <div class="col" *ngFor="let item of usersArray">
       <div class="card m-auto" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">{{item.id}} {{item.name}} {{item.surname}}</h5>
+          <h5 class="card-title">{{item.name +' '+ item.surname}}</h5>
           <p class="card-text">Email: {{item.email}}</p>
           <div class="d-flex justify-content-between">
-            <a class="btn btn-primary">Modifica</a>
-            <a class="btn btn-danger" (click)="OnClickDelete(item)">Delete</a>
+            <a class="btn btn-primary" (click)="OnChange(item.email)">Modifica</a>
+            <a class="btn btn-danger" (click)="OnDelete(item)">Delete</a>
           </div>
         </div>
       </div>
