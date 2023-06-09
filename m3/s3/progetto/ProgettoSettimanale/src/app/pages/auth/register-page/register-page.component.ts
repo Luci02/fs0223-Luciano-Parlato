@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { IRegisterData } from '../interfaces/I-register-data';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-page',
@@ -11,7 +12,8 @@ import { IRegisterData } from '../interfaces/I-register-data';
 export class RegisterPageComponent{
 
   constructor(
-    private authSvc: AuthService
+    private authSvc: AuthService,
+    private router: Router,
   ){
 
   }
@@ -26,7 +28,8 @@ export class RegisterPageComponent{
   register(){
     this.authSvc.signUp(this.data)
     .subscribe(accessData => {
-      alert(accessData.user.name)
+      alert('Registrazione avvenuta a nome di ' + accessData.user.name)
+      this.router.navigate(['/auth','login'])
     })
   }
 
