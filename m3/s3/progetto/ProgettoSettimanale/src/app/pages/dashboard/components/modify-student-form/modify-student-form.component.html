@@ -24,6 +24,6 @@
   <input type="text" class="form-control" placeholder="class" formControlName="class">
   <div class="mt-5 text-end">
     <button class="btn btn-primary me-3" [routerLink]="['/dashboard']">Cancel</button>
-    <button class="btn btn-outline-primary" (click)="sendChanges()">Confirm</button>
+    <button class="btn btn-outline-primary" #confirm >Confirm</button>
   </div>
 </form>

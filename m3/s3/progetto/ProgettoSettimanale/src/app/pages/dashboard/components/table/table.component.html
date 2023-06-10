@@ -14,8 +14,8 @@
     </tr>
   </thead>
   <tbody class="table-group-divider">
-    <tr *ngFor="let student of studentsArray">
-      <th scope="row" class="align-middle">{{student.id}}</th>
+    <tr *ngFor="let student of studentsArray; index as i">
+      <th scope="row" class="align-middle">{{i+1}}</th>
       <td class="align-middle">{{student.name}}</td>
       <td class="align-middle">{{student.surname}}</td>
       <td class="align-middle">
@@ -26,14 +26,9 @@
       </td>
       <td class="align-middle">{{student.class}}</td>
       <td class="text-center align-middle">
-          <a class="btn btn-warning me-1" [routerLink]="['/dashboard','modify-user', student.id]">Modify</a>
+          <a class="btn btn-warning me-1" [routerLink]="['/dashboard','modify-student', student.id]">Modify</a>
           <a class="btn btn-danger ms-1" (click)="OnDelete(student)">Delete</a>
       </td>
     </tr>
   </tbody>
 </table>
-
-
-<h1 class="text-light">
-  Cancellare i commenti qui e nel file TS
-</h1>

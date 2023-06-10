@@ -27,21 +27,16 @@
       "name": "Beau Morris",
       "surname": "Howard",
       "id": 4
+    },
+    {
+      "email": "nome.cognome@mail.com",
+      "password": "$2a$10$dZHrZMk7gmw7RI64JZ0KVu76H3NcyxjKMBHg3mIzIIxuhTeBBQVzq",
+      "name": "Nome",
+      "surname": "Cognome",
+      "id": 5
     }
   ],
   "students": [
-    {
-      "id": 1,
-      "name": "Janna",
-      "surname": "Elliott",
-      "address": {
-        "street": "Via Europa",
-        "civic": 117,
-        "city": "Rozzi",
-        "cap": "20089"
-      },
-      "class": "5MB"
-    },
     {
       "id": 2,
       "name": "Mario",
@@ -53,6 +48,66 @@
         "cap": 20121
       },
       "class": "A"
+    },
+    {
+      "id": 3,
+      "name": "Eos fugiat cum lau",
+      "surname": "Cillum pariatur Cup",
+      "address": {
+        "street": "Via Roma",
+        "civic": 79,
+        "city": "Roma",
+        "cap": "897984"
+      },
+      "class": "5C"
+    },
+    {
+      "id": 4,
+      "name": "Deleniti et illum e",
+      "surname": "Distinctio Sint in",
+      "address": {
+        "street": "aaaa",
+        "civic": 58,
+        "city": "aaaa",
+        "cap": "20487"
+      },
+      "class": "Omnis aut quasi irur"
+    },
+    {
+      "id": 5,
+      "name": "provaNomemodificato",
+      "surname": "provaCognomemodificato",
+      "address": {
+        "street": "Via qualcosa",
+        "civic": 200,
+        "city": "Milano",
+        "cap": "20142"
+      },
+      "class": "1E"
+    },
+    {
+      "id": 6,
+      "name": "Recusandae Voluptat",
+      "surname": "In vel laborum cum e",
+      "address": {
+        "street": "Saepe animi et impe",
+        "civic": 84,
+        "city": "Enim similique asper",
+        "cap": "Omnis consequatur to"
+      },
+      "class": "Est sit consequatur"
+    },
+    {
+      "id": 7,
+      "name": "Voluptatem modi vel",
+      "surname": "Est nulla at natus i",
+      "address": {
+        "street": "Nemo consequatur ni",
+        "civic": 11,
+        "city": "Officia Nam lorem si",
+        "cap": "Ducimus praesentium"
+      },
+      "class": "Dolor non quam esse"
     }
   ]
 }

@@ -10,7 +10,7 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'modify-user/:studentId',
+    path: 'modify-student/:studentId',
     component: ModifyStudentComponent,
   },
   {
