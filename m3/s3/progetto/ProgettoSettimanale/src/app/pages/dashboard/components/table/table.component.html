@@ -1,5 +1,5 @@
 <div class="container text-end mb-3">
-  <button class="btn btn-primary">Aggiungi un nuovo studente</button>
+  <button class="btn btn-primary" [routerLink]="['/dashboard','add-student']">Aggiungi un nuovo studente</button>
 </div>
 
 <table class="table table-striped">
@@ -26,9 +26,14 @@
       </td>
       <td class="align-middle">{{student.class}}</td>
       <td class="text-center align-middle">
-          <a class="btn btn-primary me-1" (click)="OnChangeClass(student.class)">Modifica Classe</a>
+          <a class="btn btn-warning me-1" [routerLink]="['/dashboard','modify-user', student.id]">Modify</a>
           <a class="btn btn-danger ms-1" (click)="OnDelete(student)">Delete</a>
       </td>
     </tr>
   </tbody>
 </table>
+
+
+<h1 class="text-light">
+  Cancellare i commenti qui e nel file TS
+</h1>

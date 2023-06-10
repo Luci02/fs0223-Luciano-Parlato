@@ -18,6 +18,10 @@ export class StudentService {
     return this.http.get<Istudent[]>(this.apiUrl+'/students');
   }
 
+  getSingleStudent(id: number){
+    return this.http.get<Istudent>(this.apiUrl+'/students/'+ id);
+  }
+
   post(student:Istudent){
     return this.http.post<Istudent>(this.apiUrl+'/students',student);
   }

@@ -1,0 +1,21 @@
+form{
+  max-width: 80%;
+  margin: 0 auto;
+
+  div.address{
+    width: 100%;
+
+    .street{
+      width: 40%;
+    }
+    .civic{
+      width: 10%;
+    }
+    .city{
+      width: 40%;
+    }
+    .cap{
+      width: 10%;
+    }
+  }
+}

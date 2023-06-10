@@ -6,7 +6,7 @@ export interface Istudent {
     street: string;
     civic: number;
     city: string;
-    cap: number;
+    cap: string;
   },
   class: string;
 }

@@ -37,10 +37,22 @@
       "address": {
         "street": "Via Europa",
         "civic": 117,
-        "city": "Rozzano",
+        "city": "Rozzi",
         "cap": "20089"
       },
-      "class": "1H"
+      "class": "5MB"
+    },
+    {
+      "id": 2,
+      "name": "Mario",
+      "surname": "Rossi",
+      "address": {
+        "street": "Via Roma",
+        "civic": 10,
+        "city": "Milano",
+        "cap": 20121
+      },
+      "class": "A"
     }
   ]
 }

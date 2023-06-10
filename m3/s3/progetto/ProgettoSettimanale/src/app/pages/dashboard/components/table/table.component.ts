@@ -8,6 +8,7 @@ import { Istudent } from '../../interfaces/istudent';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent {
+
   studentsArray: Istudent[] = [];
 
   constructor(
@@ -39,21 +40,4 @@ export class TableComponent {
     })
   }
 
-  OnChangeClass(classe: string): void {
-    const newClass = prompt('Enter the new email:');
-    if (newClass) {
-      const userToUpdate = this.studentsArray.find(u => u.class === classe);
-      if (userToUpdate) {
-        userToUpdate.class = newClass;
-        this.studentSvc.put(userToUpdate).subscribe(
-          response => {
-            console.log(response);
-          },
-          error => {
-            console.log(error);
-          }
-        );
-      }
-    }
-  }
 }
